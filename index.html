@@ -10,365 +10,590 @@
     --page-bg: #FCFBF8;
     --charcoal: #2C3539;
     --aubergine-wall: #5C3A58;
+    --aubergine-dark: #3E273B;
     --pale-green-wall: #C3D5C3;
     --soft-green-bg: #EAF0EA;
     --cream-card: #FDFDF8;
     --heritage-gold: #C8A24A;
     --soft-grey: #5B6670;
     --red-warning: #A94442;
+    --warning-bg: #FFF8E1;
     --white: #FFFFFF;
   }
 
-{ box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
 
-body {
-margin: 0;
-background: var(--page-bg);
-color: var(--charcoal);
-font-family: "Open Sans", Arial, sans-serif;
-font-size: 15px;
-line-height: 1.65;
-}
-.guide {
-max-width: 1100px;
-margin: 0 auto;
-padding: 24px;
-}
-.header {
-background: var(--aubergine-wall);
-color: var(--white);
-padding: 36px 28px;
-border-radius: 18px;
-margin-bottom: 28px;
-border-bottom: 6px solid var(--pale-green-wall);
-}
-.header h1 {
-font-family: "Montserrat", Arial, sans-serif;
-font-size: 34px;
-font-weight: 700;
-letter-spacing: 0.14em;
-text-transform: uppercase;
-margin: 0 0 12px;
-color: var(--white);
-}
-.gold-rule {
-width: 90px;
-height: 3px;
-background: var(--heritage-gold);
-margin: 16px 0;
-}
-.section {
-margin-top: 36px;
-}
-.section h2 {
-font-family: "Montserrat", Arial, sans-serif;
-font-size: 22px;
-font-weight: 700;
-letter-spacing: 0.10em;
-text-transform: uppercase;
-color: var(--aubergine-wall);
-margin-bottom: 20px;
-border-bottom: 2px solid var(--pale-green-wall);
-padding-bottom: 8px;
-}
-.grid {
-display: grid;
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 18px;
-}
-.grid-3 {
-display: grid;
-grid-template-columns: repeat(3, minmax(0, 1fr));
-gap: 18px;
-}
-.card {
-background: var(--soft-green-bg);
-border: 1px solid var(--pale-green-wall);
-border-radius: 14px;
-padding: 22px;
-box-shadow: 0 8px 24px rgba(44, 53, 57, 0.05);
-}
-.card h3,
-.info-box h3 {
-font-family: "Montserrat", Arial, sans-serif;
-font-size: 16px;
-font-weight: 700;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-color: var(--aubergine-wall);
-margin-top: 0;
-margin-bottom: 12px;
-}
-.info-box {
-background: var(--cream-card);
-border: 2px solid var(--pale-green-wall);
-border-radius: 14px;
-padding: 18px;
-margin-bottom: 18px;
-}
-.warning-box {
-background: var(--page-bg);
-border: 2px solid var(--aubergine-wall);
-border-left: 6px solid var(--aubergine-wall);
-border-radius: 10px;
-padding: 18px;
-margin-top: 16px;
-margin-bottom: 16px;
-}
-.big-tip {
-background: var(--aubergine-wall);
-color: var(--white);
-border: 2px solid var(--heritage-gold);
-border-radius: 14px;
-padding: 22px;
-margin-top: 24px;
-}
-.big-tip h3 {
-color: var(--heritage-gold);
-font-family: "Montserrat", Arial, sans-serif;
-font-size: 18px;
-letter-spacing: 0.10em;
-text-transform: uppercase;
-margin-top: 0;
-margin-bottom: 12px;
-}
-.step-card {
-display: flex;
-align-items: flex-start;
-background: var(--cream-card);
-border: 2px solid var(--pale-green-wall);
-border-radius: 14px;
-padding: 20px;
-margin-bottom: 16px;
-box-shadow: 0 4px 12px rgba(44, 53, 57, 0.04);
-}
-.step-number {
-flex-shrink: 0;
-width: 42px;
-height: 42px;
-background: var(--aubergine-wall);
-color: var(--white);
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: "Montserrat", Arial, sans-serif;
-font-size: 20px;
-font-weight: 700;
-margin-right: 20px;
-}
-.step-content {
-flex-grow: 1;
-}
-.step-content h3 {
-margin: 0 0 8px 0;
-color: var(--aubergine-wall);
-font-size: 17px;
-}
-.step-details {
-display: flex;
-flex-wrap: wrap;
-gap: 12px;
-margin-top: 12px;
-font-size: 13px;
-}
-.step-badge {
-background: var(--soft-green-bg);
-padding: 4px 10px;
-border-radius: 6px;
-border: 1px solid var(--pale-green-wall);
-font-weight: 600;
-color: var(--charcoal);
-}
-.table-container {
-width: 100%;
-overflow-x: auto;
-border-radius: 12px;
-box-shadow: 0 4px 16px rgba(44, 53, 57, 0.06);
-margin-bottom: 24px;
-border: 1px solid var(--pale-green-wall);
-}
-table {
-width: 100%;
-border-collapse: collapse;
-background: var(--white);
-}
-th {
-background: var(--aubergine-wall);
-color: var(--white);
-font-family: "Montserrat", Arial, sans-serif;
-font-size: 13px;
-letter-spacing: 0.06em;
-text-transform: uppercase;
-padding: 14px 12px;
-text-align: left;
-}
-td {
-padding: 12px;
-border-bottom: 1px solid var(--pale-green-wall);
-vertical-align: top;
-font-size: 14px;
-}
-tr:last-child td {
-border-bottom: none;
-}
-a.button {
-display: inline-block;
-background: var(--aubergine-wall);
-color: var(--white);
-padding: 8px 14px;
-border-radius: 999px;
-text-decoration: none;
-font-weight: 700;
-font-size: 13px;
-text-align: center;
-transition: opacity 0.2s;
-}
-a.button:hover {
-opacity: 0.9;
-}
-.mockup-container {
-background: var(--cream-card);
-border: 2px solid var(--pale-green-wall);
-border-radius: 14px;
-padding: 24px;
-text-align: center;
-margin-bottom: 24px;
-}
-.room-render {
-width: 100%;
-max-width: 800px;
-height: auto;
-border-radius: 12px;
-border: 2px solid var(--pale-green-wall);
-box-shadow: 0 8px 24px rgba(44, 53, 57, 0.12);
-display: block;
-margin: 0 auto 24px auto;
-}
-.color-swatches {
-display: flex;
-justify-content: center;
-gap: 24px;
-margin-bottom: 24px;
-}
-.swatch {
-text-align: center;
-}
-.swatch-color {
-width: 80px;
-height: 80px;
-border-radius: 50%;
-border: 3px solid var(--page-bg);
-margin: 0 auto 10px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.swatch-pale-green { background-color: var(--pale-green-wall); }
-.swatch-aubergine { background-color: var(--aubergine-wall); }
-.swatch-details {
-font-family: "Montserrat", Arial, sans-serif;
-font-size: 12px;
-font-weight: 700;
-}
-.checklist {
-list-style: none;
-padding-left: 0;
-margin: 0;
-}
-.checklist li {
-padding: 8px 0 8px 32px;
-position: relative;
-border-bottom: 1px solid var(--pale-green-wall);
-}
-.checklist li:last-child {
-border-bottom: none;
-}
-.checklist li::before {
-content: "☐";
-position: absolute;
-left: 4px;
-color: var(--aubergine-wall);
-font-size: 22px;
-top: 6px;
-font-weight: normal;
-}
-.footer {
-background: var(--aubergine-wall);
-color: var(--white);
-padding: 26px;
-border-radius: 18px;
-margin-top: 42px;
-text-align: center;
-}
-.footer strong {
-color: var(--heritage-gold);
-display: block;
-margin-bottom: 8px;
-}
-@media (max-width: 768px) {
-.header h1 { font-size: 24px; }
-.section h2 { font-size: 19px; }
-.grid, .grid-3 { grid-template-columns: 1fr; }
-table, thead, tbody, th, td, tr {
-  display: block;
-}
+  body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--charcoal);
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+  }
 
-thead tr {
-  display: none;
-}
+  .guide {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+  }
 
-tr {
-  border: 2px solid var(--pale-green-wall);
-  border-radius: 14px;
-  margin-bottom: 16px;
-  padding: 12px;
-  background: var(--soft-green-bg);
-}
+  .header {
+    background: var(--aubergine-wall);
+    color: var(--white);
+    padding: 36px 28px;
+    border-radius: 18px;
+    margin-bottom: 28px;
+    border-bottom: 6px solid var(--pale-green-wall);
+    box-shadow: 0 10px 28px rgba(44, 53, 57, 0.14);
+  }
 
-td {
-  border: none;
-  border-bottom: 1px solid var(--pale-green-wall);
-  position: relative;
-  padding: 10px 10px 10px 45%;
-  text-align: left;
-  min-height: 40px;
-}
+  .header h1 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    color: var(--white);
+  }
 
-td:last-child {
-  border-bottom: none;
-}
+  .header p {
+    margin: 0 0 10px;
+  }
 
-td::before {
-  content: attr(data-label);
-  position: absolute;
-  left: 12px;
-  top: 12px;
-  width: 40%;
-  font-weight: 700;
-  color: var(--aubergine-wall);
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 0.05em;
-}
+  .gold-rule {
+    width: 90px;
+    height: 3px;
+    background: var(--heritage-gold);
+    margin: 16px 0;
+  }
 
-.table-container {
-  background: transparent;
-  box-shadow: none;
-  border-radius: 0;
-  border: none;
-}
+  .section {
+    margin-top: 36px;
+  }
 
-.color-swatches {
-  flex-direction: column;
-  align-items: center;
-}
+  .section h2 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--aubergine-wall);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--pale-green-wall);
+    padding-bottom: 8px;
+  }
 
-}
-@media print {
-body { background: white; }
-.guide { max-width: 100%; padding: 0; }
-.card, .header, .footer, .big-tip, .step-card { box-shadow: none; border: 1px solid var(--charcoal); }
-a.button { display: none; }
-}
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .card {
+    background: var(--soft-green-bg);
+    border: 1px solid var(--pale-green-wall);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 8px 24px rgba(44, 53, 57, 0.05);
+  }
+
+  .card h3,
+  .info-box h3,
+  .product-card h3 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--aubergine-wall);
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .info-box {
+    background: var(--cream-card);
+    border: 2px solid var(--pale-green-wall);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 18px;
+  }
+
+  .warning-box {
+    background: var(--warning-bg);
+    border: 2px solid var(--red-warning);
+    border-left: 7px solid var(--red-warning);
+    border-radius: 14px;
+    padding: 18px;
+    margin-top: 16px;
+    margin-bottom: 18px;
+  }
+
+  .warning-box h3 {
+    color: var(--red-warning);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .buy-warning {
+    background: linear-gradient(135deg, var(--aubergine-wall), var(--aubergine-dark));
+    color: var(--white);
+    border: 2px solid var(--heritage-gold);
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 28px rgba(44, 53, 57, 0.12);
+  }
+
+  .buy-warning h3 {
+    color: var(--heritage-gold);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .buy-warning ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+  }
+
+  .big-tip {
+    background: var(--aubergine-wall);
+    color: var(--white);
+    border: 2px solid var(--heritage-gold);
+    border-radius: 14px;
+    padding: 22px;
+    margin-top: 24px;
+    box-shadow: 0 10px 28px rgba(44, 53, 57, 0.12);
+  }
+
+  .big-tip h3 {
+    color: var(--heritage-gold);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .product-card {
+    background: var(--cream-card);
+    border: 2px solid var(--pale-green-wall);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 22px rgba(44, 53, 57, 0.07);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    font-size: 14px;
+    color: var(--charcoal);
+  }
+
+  .product-card li {
+    border-bottom: 1px dashed var(--pale-green-wall);
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+  }
+
+  .product-card li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .button {
+    display: inline-block;
+    background: var(--aubergine-wall);
+    color: var(--white);
+    padding: 12px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    transition: opacity 0.2s, transform 0.2s;
+    margin-top: auto;
+  }
+
+  .button:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+  }
+
+  .button.secondary {
+    background: var(--heritage-gold);
+    color: var(--aubergine-dark);
+  }
+
+  .step-card {
+    display: flex;
+    align-items: flex-start;
+    background: var(--cream-card);
+    border: 2px solid var(--pale-green-wall);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(44, 53, 57, 0.04);
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background: var(--aubergine-wall);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 20px;
+  }
+
+  .step-content {
+    flex-grow: 1;
+  }
+
+  .step-content h3 {
+    margin: 0 0 8px;
+    color: var(--aubergine-wall);
+    font-size: 17px;
+    font-family: "Montserrat", Arial, sans-serif;
+  }
+
+  .step-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .step-badge {
+    background: var(--soft-green-bg);
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--pale-green-wall);
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(44, 53, 57, 0.06);
+    margin-bottom: 24px;
+    border: 1px solid var(--pale-green-wall);
+    background: var(--white);
+  }
+
+  .scroll-hint {
+    display: none;
+    color: var(--soft-grey);
+    font-size: 13px;
+    margin: -8px 0 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+  }
+
+  th {
+    background: var(--aubergine-wall);
+    color: var(--white);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 12px;
+    text-align: left;
+  }
+
+  td {
+    padding: 12px;
+    border-bottom: 1px solid var(--pale-green-wall);
+    vertical-align: top;
+    font-size: 14px;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  .mockup-container {
+    background: var(--cream-card);
+    border: 2px solid var(--pale-green-wall);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .room-render {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--pale-green-wall);
+    box-shadow: 0 8px 24px rgba(44, 53, 57, 0.12);
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .image-caption {
+    max-width: 800px;
+    margin: 0 auto 24px;
+    color: var(--soft-grey);
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .color-swatches {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  .swatch {
+    text-align: center;
+    background: var(--soft-green-bg);
+    border: 1px solid var(--pale-green-wall);
+    border-radius: 14px;
+    padding: 16px;
+    min-width: 190px;
+  }
+
+  .swatch-color {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    margin: 0 auto 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  }
+
+  .swatch-pale-green {
+    background-color: var(--pale-green-wall);
+  }
+
+  .swatch-aubergine {
+    background-color: var(--aubergine-wall);
+  }
+
+  .swatch-details {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .checklist {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .checklist li {
+    padding: 8px 0 8px 32px;
+    position: relative;
+    border-bottom: 1px solid var(--pale-green-wall);
+  }
+
+  .checklist li:last-child {
+    border-bottom: none;
+  }
+
+  .checklist li::before {
+    content: "☐";
+    position: absolute;
+    left: 4px;
+    color: var(--aubergine-wall);
+    font-size: 22px;
+    top: 5px;
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  .big-tip .checklist li {
+    border-bottom: 1px solid rgba(200, 162, 74, 0.45);
+  }
+
+  .big-tip .checklist li::before {
+    color: var(--heritage-gold);
+  }
+
+  .footer {
+    background: var(--aubergine-wall);
+    color: var(--white);
+    padding: 26px;
+    border-radius: 18px;
+    margin-top: 42px;
+    text-align: center;
+  }
+
+  .footer strong {
+    color: var(--heritage-gold);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .guide {
+      padding: 14px;
+    }
+
+    .header {
+      padding: 28px 20px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      letter-spacing: 0.10em;
+    }
+
+    .section h2 {
+      font-size: 19px;
+    }
+
+    .grid,
+    .grid-3 {
+      grid-template-columns: 1fr;
+    }
+
+    .step-card {
+      flex-direction: column;
+    }
+
+    .step-number {
+      margin: 0 0 12px;
+    }
+
+    .scroll-hint {
+      display: block;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead tr {
+      display: none;
+    }
+
+    tr {
+      border: 2px solid var(--pale-green-wall);
+      border-radius: 14px;
+      margin-bottom: 16px;
+      padding: 12px;
+      background: var(--soft-green-bg);
+    }
+
+    td {
+      border: none;
+      border-bottom: 1px solid var(--pale-green-wall);
+      position: relative;
+      padding: 10px 10px 10px 46%;
+      text-align: left;
+      min-height: 42px;
+      background: transparent;
+    }
+
+    td:last-child {
+      border-bottom: none;
+    }
+
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      width: 40%;
+      font-weight: 700;
+      color: var(--aubergine-wall);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      line-height: 1.3;
+    }
+
+    .table-container {
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
+      overflow: visible;
+    }
+
+    .color-swatches {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .swatch {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  @media print {
+    body {
+      background: white;
+    }
+
+    .guide {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .card,
+    .header,
+    .footer,
+    .big-tip,
+    .step-card,
+    .product-card,
+    .info-box,
+    .warning-box,
+    .buy-warning {
+      box-shadow: none;
+      break-inside: avoid;
+    }
+
+    a.button {
+      display: none;
+    }
+  }
 </style>
 </head>
 <body>
@@ -380,7 +605,7 @@ a.button { display: none; }
      <strong>Room:</strong> Ground floor front Victorian living room<br>
      <strong>Prepared for:</strong> Michael Henry</p>
   <p style="margin-top: 12px; font-size: 14px; color: var(--pale-green-wall);">
-     Practical preparation, accurate measurements, bespoke repair methods, product-buying strategy, and a step-by-step decorating plan tailored to the Victorian room palette.
+    Practical preparation, accurate measurements, bespoke repair methods, product-buying strategy, and a step-by-step decorating plan tailored to the Victorian room palette.
   </p>
 </header>
 
@@ -426,9 +651,11 @@ a.button { display: none; }
 
     <h3 style="margin: 0 0 16px 0; color: var(--aubergine-wall); font-family: Montserrat; text-transform: uppercase;">3D Room Visualisation</h3>
     <img src="images/3d-room-render.jpg" alt="3D render of Michael Henry's living room with pale green walls and aubergine alcoves" class="room-render">
+    <p class="image-caption">Use this image for the intended finished look: pale green main walls, aubergine alcoves, and a soft Victorian room palette.</p>
 
     <h3 style="margin: 32px 0 16px 0; color: var(--aubergine-wall); font-family: Montserrat; text-transform: uppercase;">2D Measured Floorplan</h3>
     <img src="images/2d-floorplan.jpg" alt="2D measured floorplan reference" class="room-render" style="max-width: 600px; padding: 12px; background: white;">
+    <p class="image-caption">Use this image for the room layout, bay/front wall, doorway, radiator wall, fireplace wall and alcove positions.</p>
 
   </div>
 </section>
@@ -466,8 +693,8 @@ a.button { display: none; }
     </ul>
 
     <div class="warning-box">
-      <strong>Would PVA glue work?</strong><br>
-      PVA might physically stick a small loose wallpaper area down, but it is not the best first-choice repair here. It can seal the surface, create shiny patches, affect future paint adhesion, make later repair harder, show through paint, and fail again if condensation is involved.
+      <h3>Would PVA Glue Work?</h3>
+      <p>PVA might physically stick a small loose wallpaper area down, but it is not the best first-choice repair here. It can seal the surface, create shiny patches, affect future paint adhesion, make later repair harder, show through paint, and fail again if condensation is involved.</p>
     </div>
 
     <p style="color:var(--red-warning); font-weight:600;">Practical note: If bubbling is caused by ongoing cold-wall condensation, the paint may fail again unless ventilation is managed.</p>
@@ -495,6 +722,8 @@ a.button { display: none; }
     Estimates use the confirmed 2.81 m wall height and allow extra paint for bright yellow vinyl silk and heavily textured woodchip.
   </p>
 
+  <p class="scroll-hint">On a phone, each row is shown as a card for easier reading.</p>
+
   <div class="table-container">
     <table>
       <thead>
@@ -510,25 +739,25 @@ a.button { display: none; }
         <tr>
           <td data-label="Area"><strong>Pale Green Walls</strong><br><span style="font-size:12px; color:var(--soft-grey);">North, west, east run, and south bay/front areas</span></td>
           <td data-label="Dimensions">North: 3.81 m × 2.81 m<br>West: 3.80 m × 2.81 m<br>East run: 3.80 m × 2.81 m<br>Bay/front: approx. carefully estimated</td>
-          <td data-label="Est. Wall Area">~10.7 m² north<br>~10.7 m² west<br>~10.7 m² east<br><span style="font-size:11px;">Before deductions for door, radiator, window and alcoves</span></td>
+          <td data-label="Wall Area">~10.7 m² north<br>~10.7 m² west<br>~10.7 m² east<br><span style="font-size:11px;">Before deductions for door, radiator, window and alcoves</span></td>
           <td data-label="Coats">2</td>
-          <td data-label="Suggested Qty"><strong>5 litres + 2.5 litres</strong><br><span style="font-size:11px;">Trade matt, approx. 10–12 m²/L</span></td>
+          <td data-label="Quantity"><strong>5 litres + 2.5 litres</strong><br><span style="font-size:11px;">Trade matt, approx. 10–12 m²/L</span></td>
         </tr>
 
         <tr>
           <td data-label="Area"><strong>Aubergine Alcoves</strong><br><span style="font-size:12px; color:var(--soft-grey);">North alcove 1.29 m + south alcove 1.20 m</span></td>
           <td data-label="Dimensions">2.49 m total run × 2.81 m</td>
-          <td data-label="Est. Wall Area">~7.0 m² before minor skirting deductions</td>
+          <td data-label="Wall Area">~7.0 m² before minor skirting deductions</td>
           <td data-label="Coats">2</td>
-          <td data-label="Suggested Qty"><strong>2.5 litres</strong><br><span style="font-size:11px;">Trade matt, approx. 10–12 m²/L</span></td>
+          <td data-label="Quantity"><strong>2.5 litres</strong><br><span style="font-size:11px;">Trade matt, approx. 10–12 m²/L</span></td>
         </tr>
 
         <tr>
           <td data-label="Area"><strong>Bonding Primer</strong><br><span style="font-size:12px; color:var(--soft-grey);">Over all yellow vinyl silk</span></td>
           <td data-label="Dimensions">Full room run minus windows and doors</td>
-          <td data-label="Est. Wall Area">~37 m²</td>
+          <td data-label="Wall Area">~37 m²</td>
           <td data-label="Coats">1</td>
-          <td data-label="Suggested Qty"><strong>5 litres</strong><br><span style="font-size:11px;">Zinsser 1-2-3, approx. 9–10 m²/L</span></td>
+          <td data-label="Quantity"><strong>5 litres</strong><br><span style="font-size:11px;">Zinsser 1-2-3, approx. 9–10 m²/L</span></td>
         </tr>
       </tbody>
     </table>
@@ -537,52 +766,64 @@ a.button { display: none; }
 
 <section class="section">
   <h2>Product Shopping List &amp; Strategy</h2>
-  <p style="margin-bottom: 16px; font-size:14px; color:var(--soft-grey);">
-    Focus on best total value baskets rather than only the cheapest individual item. Always check final cost = price + delivery - verified cashback.
-  </p>
+
+  <div class="buy-warning">
+    <h3>Before You Buy</h3>
+    <p>Prices, stock, delivery, click-and-collect and cashback were not verified live inside this guide. Check them on the day before purchasing.</p>
+    <ul>
+      <li>Compare the final basket total, not just the product price.</li>
+      <li>Check whether collection is free before paying for delivery.</li>
+      <li>Only subtract cashback if it is verified before checkout.</li>
+    </ul>
+  </div>
 
   <div class="grid-3">
-    <div class="card">
+    <div class="product-card">
       <h3>Bonding Primer</h3>
       <p style="margin: 0 0 8px 0; font-weight:600;">Zinsser Bulls Eye 1-2-3 Primer / Sealer</p>
-      <ul style="list-style:none; padding:0; margin:0 0 16px 0; font-size:14px; color:var(--charcoal);">
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Retailer:</strong> Toolstation / Screwfix</li>
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Price:</strong> check live price</li>
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Delivery:</strong> check free local collection</li>
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Cashback:</strong> cashback not verified today</li>
+      <ul>
+        <li><strong>Retailer:</strong> Toolstation / Screwfix</li>
+        <li><strong>Price:</strong> check live price</li>
+        <li><strong>Delivery:</strong> check free local collection</li>
+        <li><strong>Cashback:</strong> cashback not verified today</li>
         <li><strong>Est. final cost:</strong> check live price</li>
       </ul>
       <p style="font-size:12px; margin-bottom:16px;"><strong>Why suitable:</strong> Helps matt emulsion stick securely to shiny vinyl silk. Best checked locally to avoid delivery fees on a heavy tin.</p>
-      <a href="https://www.toolstation.com/zinsser-bulls-eye-123-primer-sealer-paint/p81738" class="button" style="width:100%;" target="_blank" rel="noopener">View at Toolstation</a>
+      <a href="https://www.toolstation.com/zinsser-bulls-eye-123-primer-sealer-paint/p81738" class="button" target="_blank" rel="noopener">Check live price at Toolstation</a>
     </div>
 
-    <div class="card">
+    <div class="product-card">
       <h3>Main Paint</h3>
       <p style="margin: 0 0 8px 0; font-weight:600;">Trade Vinyl Matt, Pale Green</p>
-      <ul style="list-style:none; padding:0; margin:0 0 16px 0; font-size:14px; color:var(--charcoal);">
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Retailer:</strong> Decorating Centre Online</li>
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Price:</strong> check live price</li>
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Delivery:</strong> delivery not verified today</li>
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Cashback:</strong> cashback not verified today</li>
+      <ul>
+        <li><strong>Retailer:</strong> Decorating Centre Online</li>
+        <li><strong>Price:</strong> check live price</li>
+        <li><strong>Delivery:</strong> delivery not verified today</li>
+        <li><strong>Cashback:</strong> cashback not verified today</li>
         <li><strong>Est. final cost:</strong> check live price</li>
       </ul>
       <p style="font-size:12px; margin-bottom:16px;"><strong>Why suitable:</strong> Trade paint gives better coverage over textured woodchip and strong yellow than basic retail emulsion.</p>
-      <a href="https://www.decoratingcentreonline.co.uk/products/armstead-trade-vinyl-matt-paint-colour-match" class="button" style="width:100%;" target="_blank" rel="noopener">View at DCO</a>
+      <a href="https://www.decoratingcentreonline.co.uk/products/armstead-trade-vinyl-matt-paint-colour-match" class="button" target="_blank" rel="noopener">Check paint price at DCO</a>
     </div>
 
-    <div class="card">
+    <div class="product-card">
       <h3>Alcove Paint</h3>
       <p style="margin: 0 0 8px 0; font-weight:600;">Trade Vinyl Matt, Aubergine, 2.5 L</p>
-      <ul style="list-style:none; padding:0; margin:0 0 16px 0; font-size:14px; color:var(--charcoal);">
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Retailer:</strong> Brewers or local decorator’s merchant</li>
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Price:</strong> check live price</li>
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Delivery:</strong> check local collection first</li>
-        <li style="border-bottom:1px dashed var(--pale-green-wall); padding-bottom:6px; margin-bottom:6px;"><strong>Cashback:</strong> cashback not verified today</li>
+      <ul>
+        <li><strong>Retailer:</strong> Brewers or local decorator’s merchant</li>
+        <li><strong>Price:</strong> check live price</li>
+        <li><strong>Delivery:</strong> check local collection first</li>
+        <li><strong>Cashback:</strong> cashback not verified today</li>
         <li><strong>Est. final cost:</strong> check live price</li>
       </ul>
       <p style="font-size:12px; margin-bottom:16px;"><strong>Why suitable:</strong> Rich, flat colour for the two fireplace alcoves. Local collection may avoid a small-order delivery fee.</p>
-      <a href="https://www.brewers.co.uk/" class="button" style="width:100%;" target="_blank" rel="noopener">Search at Brewers</a>
+      <a href="https://www.brewers.co.uk/" class="button" target="_blank" rel="noopener">Search aubergine paint at Brewers</a>
     </div>
+  </div>
+
+  <div class="info-box" style="margin-top:22px;">
+    <h3>Best Basket Strategy</h3>
+    <p>Start with two baskets: one local prep basket for primer, filler, adhesive and sundries, and one paint-supplier basket for the pale green and aubergine paints. Choose the cheapest final basket after product price, delivery, collection and verified cashback are all checked.</p>
   </div>
 </section>
 
@@ -594,10 +835,12 @@ a.button { display: none; }
   </p>
 
   <div class="warning-box">
-    <strong>Important buying rule:</strong><br>
-    The cheapest single product is not always the cheapest overall option. Compare the full basket using:
-    <strong>product price + delivery cost - verified cashback = estimated final cost.</strong>
+    <h3>Important Buying Rule</h3>
+    <p>The cheapest single product is not always the cheapest overall option. Compare the full basket using:</p>
+    <p><strong>product price + delivery cost - verified cashback = estimated final cost.</strong></p>
   </div>
+
+  <p class="scroll-hint">On a phone, each row is shown as a card for easier reading.</p>
 
   <div class="table-container">
     <table>
@@ -616,36 +859,36 @@ a.button { display: none; }
           <td data-label="Item"><strong>Zinsser Bulls Eye 1-2-3 Primer</strong></td>
           <td data-label="Buying Route">Toolstation or Screwfix</td>
           <td data-label="Price">check live price</td>
-          <td data-label="Delivery / Collection">check free local collection</td>
+          <td data-label="Delivery">check free local collection</td>
           <td data-label="Cashback">cashback not verified today</td>
-          <td data-label="Decision Rule">Buy where the full collected price is lowest.</td>
+          <td data-label="Decision">Buy where the full collected price is lowest.</td>
         </tr>
 
         <tr>
           <td data-label="Item"><strong>Pale Green Trade Vinyl Matt</strong></td>
           <td data-label="Buying Route">Decorating Centre Online, Brewers, PaintWell, Paint Direct or The Paint Shed</td>
           <td data-label="Price">check live price</td>
-          <td data-label="Delivery / Collection">check free-delivery threshold</td>
+          <td data-label="Delivery">check free-delivery threshold</td>
           <td data-label="Cashback">cashback not verified today</td>
-          <td data-label="Decision Rule">Choose the cheapest verified paint basket after delivery and cashback.</td>
+          <td data-label="Decision">Choose the cheapest verified paint basket after delivery and cashback.</td>
         </tr>
 
         <tr>
           <td data-label="Item"><strong>Aubergine Trade Vinyl Matt</strong></td>
           <td data-label="Buying Route">Same supplier as pale green paint if cheaper overall</td>
           <td data-label="Price">check live price</td>
-          <td data-label="Delivery / Collection">check collection or combined delivery</td>
+          <td data-label="Delivery">check collection or combined delivery</td>
           <td data-label="Cashback">cashback not verified today</td>
-          <td data-label="Decision Rule">Usually best bought with the main paint if it reduces delivery.</td>
+          <td data-label="Decision">Usually best bought with the main paint if it reduces delivery.</td>
         </tr>
 
         <tr>
           <td data-label="Item"><strong>Filler, Adhesive and Sundries</strong></td>
           <td data-label="Buying Route">Toolstation, Screwfix, B&amp;Q or Wickes</td>
           <td data-label="Price">check live price</td>
-          <td data-label="Delivery / Collection">check local collection first</td>
+          <td data-label="Delivery">check local collection first</td>
           <td data-label="Cashback">cashback not verified today</td>
-          <td data-label="Decision Rule">Avoid paying delivery on small low-cost items where possible.</td>
+          <td data-label="Decision">Avoid paying delivery on small low-cost items where possible.</td>
         </tr>
       </tbody>
     </table>
@@ -654,6 +897,8 @@ a.button { display: none; }
 
 <section class="section">
   <h2>Delivery &amp; Cashback Comparison</h2>
+
+  <p class="scroll-hint">On a phone, each row is shown as a card for easier reading.</p>
 
   <div class="table-container">
     <table>
@@ -670,25 +915,25 @@ a.button { display: none; }
         <tr>
           <td data-label="Basket"><strong>Toolstation / Screwfix local basket</strong></td>
           <td data-label="Best Use">Primer, filler, adhesive, sanding blocks and small tools</td>
-          <td data-label="Delivery / Collection">check click-and-collect first</td>
+          <td data-label="Delivery">check click-and-collect first</td>
           <td data-label="Cashback">cashback not verified today</td>
-          <td data-label="Best Decision">Likely best if collection avoids delivery fees on heavy prep products.</td>
+          <td data-label="Decision">Likely best if collection avoids delivery fees on heavy prep products.</td>
         </tr>
 
         <tr>
           <td data-label="Basket"><strong>Paint supplier basket</strong></td>
           <td data-label="Best Use">Pale green and aubergine trade vinyl matt</td>
-          <td data-label="Delivery / Collection">check free-delivery threshold before ordering</td>
+          <td data-label="Delivery">check free-delivery threshold before ordering</td>
           <td data-label="Cashback">cashback not verified today</td>
-          <td data-label="Best Decision">Likely best if both colours qualify for free delivery or verified cashback.</td>
+          <td data-label="Decision">Likely best if both colours qualify for free delivery or verified cashback.</td>
         </tr>
 
         <tr>
           <td data-label="Basket"><strong>Single mixed basket</strong></td>
           <td data-label="Best Use">Everything from one retailer</td>
-          <td data-label="Delivery / Collection">delivery not verified today</td>
+          <td data-label="Delivery">delivery not verified today</td>
           <td data-label="Cashback">cashback not verified today</td>
-          <td data-label="Best Decision">Only choose this if the final total beats splitting paint and prep items.</td>
+          <td data-label="Decision">Only choose this if the final total beats splitting paint and prep items.</td>
         </tr>
       </tbody>
     </table>
@@ -830,6 +1075,9 @@ a.button { display: none; }
 
 <section class="section">
   <h2>Drying &amp; Recoat Timetable</h2>
+
+  <p class="scroll-hint">On a phone, each row is shown as a card for easier reading.</p>
+
   <div class="table-container">
     <table>
       <thead>
@@ -841,19 +1089,19 @@ a.button { display: none; }
       </thead>
       <tbody>
         <tr>
-          <td data-label="Product / Stage">Toupret Interior Filler</td>
+          <td data-label="Stage">Toupret Interior Filler</td>
           <td data-label="Touch Dry">1–2 hours surface dry</td>
-          <td data-label="Ready for Next Step">12–24 hours depending on depth before sanding</td>
+          <td data-label="Ready">12–24 hours depending on depth before sanding</td>
         </tr>
         <tr>
-          <td data-label="Product / Stage">Zinsser 1-2-3 Primer</td>
+          <td data-label="Stage">Zinsser 1-2-3 Primer</td>
           <td data-label="Touch Dry">30 minutes to 1 hour</td>
-          <td data-label="Ready for Next Step">Usually recoatable after 1–2 hours; check tin</td>
+          <td data-label="Ready">Usually recoatable after 1–2 hours; check tin</td>
         </tr>
         <tr>
-          <td data-label="Product / Stage">Trade Vinyl Matt Emulsion</td>
+          <td data-label="Stage">Trade Vinyl Matt Emulsion</td>
           <td data-label="Touch Dry">1–2 hours</td>
-          <td data-label="Ready for Next Step">Recoat after 2–4 hours; check tin</td>
+          <td data-label="Ready">Recoat after 2–4 hours; check tin</td>
         </tr>
       </tbody>
     </table>
@@ -864,10 +1112,10 @@ a.button { display: none; }
   <div class="big-tip">
     <h3>Big Tip: Safety &amp; Masking</h3>
     <ul class="checklist" style="color:var(--white);">
-      <li style="border-bottom:1px solid var(--heritage-gold);"><strong>Ventilate:</strong> Always ventilate the room well when sanding, priming and painting.</li>
-      <li style="border-bottom:1px solid var(--heritage-gold);"><strong>PPE:</strong> Wear eye protection and a suitable mask when sanding the vinyl silk and dried filler.</li>
-      <li style="border-bottom:1px solid var(--heritage-gold);"><strong>Tape removal:</strong> Remove masking tape while the final coat is slightly damp to prevent peeling fresh paint.</li>
-      <li style="border-bottom:none;"><strong>Radiator access:</strong> Protect the floor beneath the west wall radiator and use a mini roller on a long handle to reach behind it.</li>
+      <li><strong>Ventilate:</strong> Always ventilate the room well when sanding, priming and painting.</li>
+      <li><strong>PPE:</strong> Wear eye protection and a suitable mask when sanding the vinyl silk and dried filler.</li>
+      <li><strong>Tape removal:</strong> Remove masking tape while the final coat is slightly damp to prevent peeling fresh paint.</li>
+      <li><strong>Radiator access:</strong> Protect the floor beneath the west wall radiator and use a mini roller on a long handle to reach behind it.</li>
     </ul>
   </div>
 </section>
@@ -876,6 +1124,7 @@ a.button { display: none; }
   <h2>Final Finish Checklist</h2>
   <div class="grid">
     <div class="card">
+      <h3>Before Painting</h3>
       <ul class="checklist">
         <li>Bubbled woodchip safely re-adhered or trimmed back.</li>
         <li>Repaired areas filled and stippled to match texture.</li>
@@ -886,6 +1135,7 @@ a.button { display: none; }
     </div>
 
     <div class="card">
+      <h3>After Painting</h3>
       <ul class="checklist">
         <li>Edges masked securely, especially the chimney and alcove split.</li>
         <li>First coat applied and fully dried.</li>
