@@ -148,7 +148,8 @@
     margin-bottom: 10px;
   }
 
-  .buy-warning {
+  .buy-warning,
+  .total-box {
     background: linear-gradient(135deg, var(--aubergine-wall), var(--aubergine-dark));
     color: var(--white);
     border: 2px solid var(--heritage-gold);
@@ -158,7 +159,8 @@
     box-shadow: 0 10px 28px rgba(44, 53, 57, 0.12);
   }
 
-  .buy-warning h3 {
+  .buy-warning h3,
+  .total-box h3 {
     color: var(--heritage-gold);
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 17px;
@@ -171,6 +173,14 @@
   .buy-warning ul {
     margin: 10px 0 0;
     padding-left: 20px;
+  }
+
+  .total-number {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--heritage-gold);
+    margin: 8px 0;
   }
 
   .big-tip {
@@ -239,11 +249,6 @@
   .button:hover {
     opacity: 0.92;
     transform: translateY(-1px);
-  }
-
-  .button.secondary {
-    background: var(--heritage-gold);
-    color: var(--aubergine-dark);
   }
 
   .step-card {
@@ -585,7 +590,8 @@
     .product-card,
     .info-box,
     .warning-box,
-    .buy-warning {
+    .buy-warning,
+    .total-box {
       box-shadow: none;
       break-inside: avoid;
     }
@@ -605,7 +611,7 @@
      <strong>Room:</strong> Ground floor front Victorian living room<br>
      <strong>Prepared for:</strong> Michael Henry</p>
   <p style="margin-top: 12px; font-size: 14px; color: var(--pale-green-wall);">
-    Practical preparation, accurate measurements, bespoke repair methods, product-buying strategy, and a step-by-step decorating plan tailored to the Victorian room palette.
+    Practical preparation, accurate measurements, product-buying strategy, estimated total cost, and step-by-step decorating plan tailored to the Victorian room palette.
   </p>
 </header>
 
@@ -757,7 +763,7 @@
           <td data-label="Dimensions">Full room run minus windows and doors</td>
           <td data-label="Wall Area">~37 m²</td>
           <td data-label="Coats">1</td>
-          <td data-label="Quantity"><strong>5 litres</strong><br><span style="font-size:11px;">Zinsser 1-2-3, approx. 9–10 m²/L</span></td>
+          <td data-label="Quantity"><strong>5 litres</strong><br><span style="font-size:11px;">2 × 2.5 litre tins of Zinsser 1-2-3</span></td>
         </tr>
       </tbody>
     </table>
@@ -769,7 +775,7 @@
 
   <div class="buy-warning">
     <h3>Before You Buy</h3>
-    <p>Prices, stock, delivery, click-and-collect and cashback were not verified live inside this guide. Check them on the day before purchasing.</p>
+    <p>Prices, stock, delivery, click-and-collect and cashback were checked only as public estimates for this guide. Re-check them on the day before purchasing.</p>
     <ul>
       <li>Compare the final basket total, not just the product price.</li>
       <li>Check whether collection is free before paying for delivery.</li>
@@ -782,13 +788,13 @@
       <h3>Bonding Primer</h3>
       <p style="margin: 0 0 8px 0; font-weight:600;">Zinsser Bulls Eye 1-2-3 Primer / Sealer</p>
       <ul>
+        <li><strong>Quantity:</strong> 2 × 2.5 L tins</li>
         <li><strong>Retailer:</strong> Toolstation / Screwfix</li>
-        <li><strong>Price:</strong> check live price</li>
+        <li><strong>Checked price:</strong> £34.64 per 2.5 L tin</li>
+        <li><strong>Estimated subtotal:</strong> £69.28</li>
         <li><strong>Delivery:</strong> check free local collection</li>
-        <li><strong>Cashback:</strong> cashback not verified today</li>
-        <li><strong>Est. final cost:</strong> check live price</li>
       </ul>
-      <p style="font-size:12px; margin-bottom:16px;"><strong>Why suitable:</strong> Helps matt emulsion stick securely to shiny vinyl silk. Best checked locally to avoid delivery fees on a heavy tin.</p>
+      <p style="font-size:12px; margin-bottom:16px;"><strong>Why suitable:</strong> Helps matt emulsion stick securely to shiny vinyl silk. Best checked locally to avoid delivery fees on heavy tins.</p>
       <a href="https://www.toolstation.com/zinsser-bulls-eye-123-primer-sealer-paint/p81738" class="button" target="_blank" rel="noopener">Check live price at Toolstation</a>
     </div>
 
@@ -796,25 +802,25 @@
       <h3>Main Paint</h3>
       <p style="margin: 0 0 8px 0; font-weight:600;">Trade Vinyl Matt, Pale Green</p>
       <ul>
+        <li><strong>Quantity:</strong> 5 L + 2.5 L</li>
         <li><strong>Retailer:</strong> Decorating Centre Online</li>
-        <li><strong>Price:</strong> check live price</li>
-        <li><strong>Delivery:</strong> delivery not verified today</li>
-        <li><strong>Cashback:</strong> cashback not verified today</li>
-        <li><strong>Est. final cost:</strong> check live price</li>
+        <li><strong>Checked price:</strong> £35.00 + £21.66</li>
+        <li><strong>Estimated subtotal:</strong> £56.66</li>
+        <li><strong>Delivery:</strong> delivery not included</li>
       </ul>
       <p style="font-size:12px; margin-bottom:16px;"><strong>Why suitable:</strong> Trade paint gives better coverage over textured woodchip and strong yellow than basic retail emulsion.</p>
-      <a href="https://www.decoratingcentreonline.co.uk/products/armstead-trade-vinyl-matt-paint-colour-match" class="button" target="_blank" rel="noopener">Check paint price at DCO</a>
+      <a href="https://www.decoratingcentreonline.co.uk/products/armstead-trade-vinyl-matt-paint-colour-match" class="button" target="_blank" rel="noopener">Check pale green paint price at DCO</a>
     </div>
 
     <div class="product-card">
       <h3>Alcove Paint</h3>
-      <p style="margin: 0 0 8px 0; font-weight:600;">Trade Vinyl Matt, Aubergine, 2.5 L</p>
+      <p style="margin: 0 0 8px 0; font-weight:600;">Trade Vinyl Matt, Aubergine</p>
       <ul>
-        <li><strong>Retailer:</strong> Brewers or local decorator’s merchant</li>
-        <li><strong>Price:</strong> check live price</li>
-        <li><strong>Delivery:</strong> check local collection first</li>
-        <li><strong>Cashback:</strong> cashback not verified today</li>
-        <li><strong>Est. final cost:</strong> check live price</li>
+        <li><strong>Quantity:</strong> 2.5 L</li>
+        <li><strong>Retailer:</strong> Brewers / Albany estimate</li>
+        <li><strong>Checked price:</strong> approx. £24.78</li>
+        <li><strong>Estimated subtotal:</strong> £24.78</li>
+        <li><strong>Delivery:</strong> verify local collection</li>
       </ul>
       <p style="font-size:12px; margin-bottom:16px;"><strong>Why suitable:</strong> Rich, flat colour for the two fireplace alcoves. Local collection may avoid a small-order delivery fee.</p>
       <a href="https://www.brewers.co.uk/" class="button" target="_blank" rel="noopener">Search aubergine paint at Brewers</a>
@@ -828,10 +834,183 @@
 </section>
 
 <section class="section">
+  <h2>Total Estimated Cost</h2>
+
+  <div class="total-box">
+    <h3>Estimated Full Basket Total</h3>
+    <p class="total-number">Approx. £213.29</p>
+    <p>This includes paint, primer, filler, adhesive, sugar soap, dust sheets, masking tape, sanding block, roller frame, roller sleeves, brush set, roller tray, paint kettle and decorators caulk.</p>
+    <p><strong>Sensible working budget:</strong> allow around <strong>£235</strong> before cashback, to cover small price changes, extra tape, extra sleeves, delivery differences or forgotten sundries.</p>
+  </div>
+
+  <p class="scroll-hint">On a phone, each row is shown as a card for easier reading.</p>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Checked / Estimated Unit Price</th>
+          <th>Estimated Subtotal</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Category"><strong>Primer</strong></td>
+          <td data-label="Item">Zinsser Bulls Eye 1-2-3 Primer / Sealer 2.5 L</td>
+          <td data-label="Quantity">2 tins</td>
+          <td data-label="Unit Price">£34.64</td>
+          <td data-label="Subtotal"><strong>£69.28</strong></td>
+          <td data-label="Notes">Needed because the existing finish is shiny vinyl silk.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Main wall paint</strong></td>
+          <td data-label="Item">Armstead Trade Vinyl Matt Colour Match, pale green</td>
+          <td data-label="Quantity">5 L + 2.5 L</td>
+          <td data-label="Unit Price">£35.00 + £21.66</td>
+          <td data-label="Subtotal"><strong>£56.66</strong></td>
+          <td data-label="Notes">Suggested amount for pale green main walls, allowing for textured woodchip.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Alcove paint</strong></td>
+          <td data-label="Item">Albany / trade vinyl matt, aubergine</td>
+          <td data-label="Quantity">2.5 L</td>
+          <td data-label="Unit Price">approx. £24.78</td>
+          <td data-label="Subtotal"><strong>£24.78</strong></td>
+          <td data-label="Notes">Verify exact Brewers/local merchant product and colour before purchase.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Repair</strong></td>
+          <td data-label="Item">Toupret Interior Filler Le Reboucheur 2 kg</td>
+          <td data-label="Quantity">1</td>
+          <td data-label="Unit Price">£12.39</td>
+          <td data-label="Subtotal"><strong>£12.39</strong></td>
+          <td data-label="Notes">For picture holes and localised damaged wallpaper repair.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Repair</strong></td>
+          <td data-label="Item">Wallpaper adhesive / repair adhesive</td>
+          <td data-label="Quantity">1</td>
+          <td data-label="Unit Price">£4.58</td>
+          <td data-label="Subtotal"><strong>£4.58</strong></td>
+          <td data-label="Notes">Use to re-bond the bubbled woodchip where possible.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Cleaning</strong></td>
+          <td data-label="Item">Sugar Soap Liquid or Spray 500 ml</td>
+          <td data-label="Quantity">1</td>
+          <td data-label="Unit Price">£3.69</td>
+          <td data-label="Subtotal"><strong>£3.69</strong></td>
+          <td data-label="Notes">For cleaning after sanding and before priming.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Protection</strong></td>
+          <td data-label="Item">Polythene dust sheet roll / dust sheets</td>
+          <td data-label="Quantity">1 roll</td>
+          <td data-label="Unit Price">£5.09</td>
+          <td data-label="Subtotal"><strong>£5.09</strong></td>
+          <td data-label="Notes">Protects the floor and furniture during sanding and painting.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Protection</strong></td>
+          <td data-label="Item">Masking tape 48 mm × 50 m</td>
+          <td data-label="Quantity">2 rolls</td>
+          <td data-label="Unit Price">£2.48</td>
+          <td data-label="Subtotal"><strong>£4.96</strong></td>
+          <td data-label="Notes">For skirting, sockets, radiator edges and alcove paint lines.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Sanding</strong></td>
+          <td data-label="Item">Fine / medium sanding block</td>
+          <td data-label="Quantity">1</td>
+          <td data-label="Unit Price">£1.89</td>
+          <td data-label="Subtotal"><strong>£1.89</strong></td>
+          <td data-label="Notes">For de-glossing vinyl silk and smoothing filler.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Painting tools</strong></td>
+          <td data-label="Item">9 inch roller frame</td>
+          <td data-label="Quantity">1</td>
+          <td data-label="Unit Price">£2.99</td>
+          <td data-label="Subtotal"><strong>£2.99</strong></td>
+          <td data-label="Notes">Main roller frame for walls and primer.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Painting tools</strong></td>
+          <td data-label="Item">9 inch medium-pile roller sleeves</td>
+          <td data-label="Quantity">3 sleeves</td>
+          <td data-label="Unit Price">£2.99</td>
+          <td data-label="Subtotal"><strong>£8.97</strong></td>
+          <td data-label="Notes">One for primer, one for pale green, one for aubergine.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Painting tools</strong></td>
+          <td data-label="Item">9 inch roller tray</td>
+          <td data-label="Quantity">1</td>
+          <td data-label="Unit Price">£3.59</td>
+          <td data-label="Subtotal"><strong>£3.59</strong></td>
+          <td data-label="Notes">Basic tray for rolling walls.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Painting tools</strong></td>
+          <td data-label="Item">Synthetic paintbrush set, 5 piece</td>
+          <td data-label="Quantity">1 set</td>
+          <td data-label="Unit Price">£9.98</td>
+          <td data-label="Subtotal"><strong>£9.98</strong></td>
+          <td data-label="Notes">For cutting in around ceiling, bay, fireplace, sockets and skirting.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Painting tools</strong></td>
+          <td data-label="Item">Plastic paint kettle 2.5 L</td>
+          <td data-label="Quantity">1</td>
+          <td data-label="Unit Price">£2.89</td>
+          <td data-label="Subtotal"><strong>£2.89</strong></td>
+          <td data-label="Notes">Useful for cutting in without carrying a full tin.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Finishing</strong></td>
+          <td data-label="Item">Decorators caulk 290 ml</td>
+          <td data-label="Quantity">1</td>
+          <td data-label="Unit Price">£1.55</td>
+          <td data-label="Subtotal"><strong>£1.55</strong></td>
+          <td data-label="Notes">Optional, for small gaps if needed before painting.</td>
+        </tr>
+
+        <tr>
+          <td data-label="Category"><strong>Total</strong></td>
+          <td data-label="Item"><strong>Estimated full basket before delivery/cashback</strong></td>
+          <td data-label="Quantity">All listed items</td>
+          <td data-label="Unit Price">Mixed checked prices</td>
+          <td data-label="Subtotal"><strong>£213.29</strong></td>
+          <td data-label="Notes">Allow around £235 as a practical working budget.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
   <h2>Cheapest Price Comparison</h2>
 
   <p style="margin-bottom: 16px; font-size:14px; color:var(--soft-grey);">
-    This section is for the final buying check before purchase. Do not treat any option as confirmed cheapest until live product price, delivery/click-and-collect and cashback have been checked on the day.
+    Prices are a useful estimate, not a guaranteed final basket. Re-check product price, stock, delivery, click-and-collect and cashback on the day of buying.
   </p>
 
   <div class="warning-box">
@@ -848,7 +1027,7 @@
         <tr>
           <th>Item</th>
           <th>Buying Route to Check</th>
-          <th>Price</th>
+          <th>Current Estimate</th>
           <th>Delivery / Collection</th>
           <th>Cashback</th>
           <th>Decision Rule</th>
@@ -858,36 +1037,36 @@
         <tr>
           <td data-label="Item"><strong>Zinsser Bulls Eye 1-2-3 Primer</strong></td>
           <td data-label="Buying Route">Toolstation or Screwfix</td>
-          <td data-label="Price">check live price</td>
+          <td data-label="Estimate">£69.28 for 2 × 2.5 L</td>
           <td data-label="Delivery">check free local collection</td>
-          <td data-label="Cashback">cashback not verified today</td>
+          <td data-label="Cashback">verify before checkout</td>
           <td data-label="Decision">Buy where the full collected price is lowest.</td>
         </tr>
 
         <tr>
           <td data-label="Item"><strong>Pale Green Trade Vinyl Matt</strong></td>
           <td data-label="Buying Route">Decorating Centre Online, Brewers, PaintWell, Paint Direct or The Paint Shed</td>
-          <td data-label="Price">check live price</td>
+          <td data-label="Estimate">£56.66 for 5 L + 2.5 L at DCO</td>
           <td data-label="Delivery">check free-delivery threshold</td>
-          <td data-label="Cashback">cashback not verified today</td>
+          <td data-label="Cashback">verify before checkout</td>
           <td data-label="Decision">Choose the cheapest verified paint basket after delivery and cashback.</td>
         </tr>
 
         <tr>
           <td data-label="Item"><strong>Aubergine Trade Vinyl Matt</strong></td>
-          <td data-label="Buying Route">Same supplier as pale green paint if cheaper overall</td>
-          <td data-label="Price">check live price</td>
+          <td data-label="Buying Route">Brewers/local decorator’s merchant or same supplier as pale green</td>
+          <td data-label="Estimate">approx. £24.78 for 2.5 L</td>
           <td data-label="Delivery">check collection or combined delivery</td>
-          <td data-label="Cashback">cashback not verified today</td>
-          <td data-label="Decision">Usually best bought with the main paint if it reduces delivery.</td>
+          <td data-label="Cashback">verify before checkout</td>
+          <td data-label="Decision">Buy with the main paint if it reduces the final delivered cost.</td>
         </tr>
 
         <tr>
-          <td data-label="Item"><strong>Filler, Adhesive and Sundries</strong></td>
+          <td data-label="Item"><strong>Tools and Sundries</strong></td>
           <td data-label="Buying Route">Toolstation, Screwfix, B&amp;Q or Wickes</td>
-          <td data-label="Price">check live price</td>
+          <td data-label="Estimate">approx. £62.57</td>
           <td data-label="Delivery">check local collection first</td>
-          <td data-label="Cashback">cashback not verified today</td>
+          <td data-label="Cashback">verify before checkout</td>
           <td data-label="Decision">Avoid paying delivery on small low-cost items where possible.</td>
         </tr>
       </tbody>
@@ -914,25 +1093,25 @@
       <tbody>
         <tr>
           <td data-label="Basket"><strong>Toolstation / Screwfix local basket</strong></td>
-          <td data-label="Best Use">Primer, filler, adhesive, sanding blocks and small tools</td>
+          <td data-label="Best Use">Primer, filler, adhesive, sanding block, tape, roller tray, sleeves, brushes and small tools</td>
           <td data-label="Delivery">check click-and-collect first</td>
-          <td data-label="Cashback">cashback not verified today</td>
-          <td data-label="Decision">Likely best if collection avoids delivery fees on heavy prep products.</td>
+          <td data-label="Cashback">verify before checkout</td>
+          <td data-label="Decision">Likely best if collection avoids delivery fees on heavy prep products and sundries.</td>
         </tr>
 
         <tr>
           <td data-label="Basket"><strong>Paint supplier basket</strong></td>
           <td data-label="Best Use">Pale green and aubergine trade vinyl matt</td>
           <td data-label="Delivery">check free-delivery threshold before ordering</td>
-          <td data-label="Cashback">cashback not verified today</td>
+          <td data-label="Cashback">verify before checkout</td>
           <td data-label="Decision">Likely best if both colours qualify for free delivery or verified cashback.</td>
         </tr>
 
         <tr>
           <td data-label="Basket"><strong>Single mixed basket</strong></td>
           <td data-label="Best Use">Everything from one retailer</td>
-          <td data-label="Delivery">delivery not verified today</td>
-          <td data-label="Cashback">cashback not verified today</td>
+          <td data-label="Delivery">delivery not included in estimate</td>
+          <td data-label="Cashback">verify before checkout</td>
           <td data-label="Decision">Only choose this if the final total beats splitting paint and prep items.</td>
         </tr>
       </tbody>
@@ -946,13 +1125,13 @@
     <div class="card" style="padding:16px;">
       <h3>Preparation</h3>
       <ul class="checklist" style="font-size:14px;">
-        <li>Dust sheets</li>
-        <li>Masking tape</li>
+        <li>Dust sheets or polythene dust sheet roll</li>
+        <li>Masking tape, ideally 2 rolls</li>
         <li>Sugar soap and sponge</li>
-        <li>Craft knife and syringe</li>
-        <li>Seam repair adhesive</li>
+        <li>Craft knife and syringe/nozzle if available</li>
+        <li>Wallpaper seam repair adhesive</li>
         <li>Toupret interior filler</li>
-        <li>Sandpaper and block</li>
+        <li>Sandpaper or sanding block</li>
         <li>Clean cloths and PPE</li>
       </ul>
     </div>
@@ -960,10 +1139,12 @@
     <div class="card" style="padding:16px;">
       <h3>Painting</h3>
       <ul class="checklist" style="font-size:14px;">
-        <li>Roller frame and sleeves</li>
+        <li>9 inch roller frame</li>
+        <li>3 medium-pile roller sleeves</li>
         <li>Angled cutting-in brush</li>
-        <li>Paint tray or scuttle</li>
-        <li>Extension pole</li>
+        <li>Paintbrush set</li>
+        <li>Paint tray</li>
+        <li>Paint kettle</li>
         <li>Zinsser 1-2-3 primer</li>
         <li>Trade vinyl matt paints</li>
       </ul>
@@ -972,7 +1153,8 @@
     <div class="card" style="padding:16px;">
       <h3>Finishing</h3>
       <ul class="checklist" style="font-size:14px;">
-        <li>Small artist’s brush</li>
+        <li>Small artist’s brush for touch-ups</li>
+        <li>Decorators caulk if gaps need filling</li>
         <li>Bin bags</li>
         <li>Spare tape</li>
         <li>Cleaning cloths</li>
@@ -1149,7 +1331,7 @@
 
 <footer class="footer">
   <strong>Decorating guide prepared as a practical friend-to-friend help sheet.</strong>
-  Always check product labels, drying times, live prices, delivery and cashback before buying.
+  Estimated total is based on publicly checked prices and excludes delivery/cashback changes. Always re-check product labels, drying times, stock, live prices, delivery and cashback before buying.
 </footer>
 
   </main>
