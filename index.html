@@ -573,32 +573,114 @@
   }
 
   @media print {
-    body {
-      background: white;
-    }
-
-    .guide {
-      max-width: 100%;
-      padding: 0;
-    }
-
-    .card,
-    .header,
-    .footer,
-    .big-tip,
-    .step-card,
-    .product-card,
-    .info-box,
-    .warning-box,
-    .buy-warning,
-    .total-box {
-      box-shadow: none;
-      break-inside: avoid;
-    }
-
-    a.button {
-      display: none;
-    }
+@page {
+size: A4;
+margin: 12mm;
+}
+html,
+body {
+background: #ffffff !important;
+color: #000000 !important;
+font-size: 11pt;
+line-height: 1.45;
+-webkit-print-color-adjust: exact;
+print-color-adjust: exact;
+}
+.guide {
+max-width: 100%;
+padding: 0;
+}
+.header,
+.footer,
+.big-tip,
+.buy-warning,
+.total-box {
+color: #ffffff !important;
+background: #5C3A58 !important;
+border: 1px solid #5C3A58 !important;
+box-shadow: none !important;
+}
+.header *,
+.footer *,
+.big-tip *,
+.buy-warning *,
+.total-box * {
+color: inherit !important;
+}
+.header strong,
+.footer strong,
+.big-tip h3,
+.buy-warning h3,
+.total-box h3,
+.total-number {
+color: #C8A24A !important;
+}
+.card,
+.product-card,
+.info-box,
+.warning-box,
+.step-card,
+.mockup-container,
+.table-container {
+box-shadow: none !important;
+break-inside: avoid;
+page-break-inside: avoid;
+}
+.section {
+margin-top: 18px;
+break-inside: auto;
+}
+.section h2 {
+font-size: 15pt;
+margin-bottom: 10px;
+page-break-after: avoid;
+break-after: avoid;
+}
+.header h1 {
+font-size: 22pt;
+letter-spacing: 0.08em;
+}
+.grid,
+.grid-3 {
+gap: 10px;
+}
+table {
+font-size: 9pt;
+page-break-inside: auto;
+}
+tr {
+page-break-inside: avoid;
+break-inside: avoid;
+}
+th,
+td {
+padding: 6px;
+}
+.room-render {
+max-height: 180mm;
+object-fit: contain;
+box-shadow: none !important;
+}
+.button,
+.scroll-hint {
+display: none !important;
+}
+a {
+color: #000000 !important;
+text-decoration: none;
+}
+.checklist li {
+padding-top: 4px;
+padding-bottom: 4px;
+}
+.step-card {
+margin-bottom: 8px;
+}
+.step-number {
+print-color-adjust: exact;
+-webkit-print-color-adjust: exact;
+}
+}
   }
 </style>
 </head>
