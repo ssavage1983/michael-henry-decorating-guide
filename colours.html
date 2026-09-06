@@ -8,68 +8,423 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav class="site-nav"><div class="nav-inner"><a class="brand" href="index.html">Decorating Guide</a><div class="nav-links"><a href="index.html">Home</a><div class="dropdown"><span class="dropbtn">Guide Sections ▼</span><div class="dropdown-content"><a href="preparation.html">Preparation</a><a href="products.html">Products &amp; Costs</a><a href="colours.html">Colours</a><a href="furnishings.html">Furnishings</a><a href="checklist.html">Checklist / PDF</a></div></div></div></div></nav>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Decorating Guide</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropbtn">Guide Sections ▼</span>
+        <div class="dropdown-content">
+          <a href="preparation.html">Preparation</a>
+          <a href="products.html">Products &amp; Costs</a>
+          <a href="colours.html">Colours</a>
+          <a href="furnishings.html">Furnishings</a>
+          <a href="checklist.html">Checklist / PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 <main class="guide">
-<header class="header">
-  <h1>Colours</h1>
-  <div class="gold-rule"></div>
-  <p>Main recommendation: Dulux Lichen Green 70YY 55/299 with aubergine or brown-aubergine for the music-zone wall.</p>
-</header>
-<section class="section">
-  <h2>Recommended Pairing</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Main Walls</h3>
-      <div class="swatch-colour" style="background:#A8B595;"></div>
-      <p><strong>Lichen Green</strong><br>Hex: #A8B595<br>Dulux notation: 70YY 55/299</p>
-      <p>Use this as the main living-room wall colour. Order as a colour match by brand/name/code where available.</p>
+  <header class="header">
+    <h1>Colours</h1>
+    <div class="gold-rule"></div>
+    <p>Main recommendation: Dulux Lichen Green 70YY 55/299 with aubergine or brown-aubergine for the music-zone wall.</p>
+    <p style="font-size:14px; color:var(--pale-green);">Click any individual colour to open a full A4 printable swatch. Click a side-by-side combination to open a comparison screen where the colours can be changed and printed.</p>
+  </header>
+  <section class="section">
+    <h2>Recommended Pairing</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="recommended-badge">Recommended main wall colour</span>
+        <h3>Main Walls</h3>
+        <div class="swatch-colour" style="background:#A8B595;" onclick="openSingleSwatch('Lichen Green', '#A8B595', 'Dulux 70YY 55/299', 'Recommended for the main living-room walls.')"></div>
+        <p><strong>Lichen Green</strong><br>Hex: #A8B595<br>Dulux notation: 70YY 55/299</p>
+        <p>Use this as the main living-room wall colour. Order as a colour match by brand/name/code where available.</p>
+        <p class="swatch-help">Click the colour block to print this as a full A4 colour swatch.</p>
+      </div>
+  <div class="card">
+    <span class="recommended-badge">Recommended feature-zone colour</span>
+    <h3>Music Zone</h3>
+    <div class="swatch-colour" style="background:#5C3A58;" onclick="openSingleSwatch('Original Aubergine', '#5C3A58', 'Visual colour reference', 'Recommended for the back wall/back alcove music-zone feature area.')"></div>
+    <p><strong>Original Aubergine</strong><br>Hex: #5C3A58</p>
+    <p>Use for the back wall/back alcove music-zone feature area, or switch to a warmer brown-aubergine if it works better with the furniture.</p>
+    <p class="swatch-help">Click the colour block to print this as a full A4 colour swatch.</p>
+  </div>
+</div>
+
+  </section>
+  <section class="section">
+    <h2>Green Range</h2>
+    <div class="swatch-grid">
+      <div class="swatch-card" onclick="openSingleSwatch('Lichen Green', '#A8B595', 'Dulux 70YY 55/299', 'Best main-wall choice Michael liked.')">
+        <span class="recommended-badge">Main choice</span>
+        <div class="swatch-colour" style="background:#A8B595;"></div>
+        <strong>Lichen Green</strong><br>#A8B595<br>70YY 55/299
+      </div>
+  <div class="swatch-card" onclick="openSingleSwatch('Light Lichen', '#BBC7AA', 'Visual reference', 'Softer, lighter option around the Lichen Green family.')">
+    <div class="swatch-colour" style="background:#BBC7AA;"></div>
+    <strong>Light Lichen</strong><br>#BBC7AA<br>Softer option
+  </div>
+
+  <div class="swatch-card" onclick="openSingleSwatch('Grey Sage', '#9FAE92', 'Visual reference', 'Slightly greyer, calmer sage option.')">
+    <div class="swatch-colour" style="background:#9FAE92;"></div>
+    <strong>Grey Sage</strong><br>#9FAE92<br>More muted
+  </div>
+
+  <div class="swatch-card" onclick="openSingleSwatch('Heritage Olive Green', '#96A476', 'Visual reference', 'Warmer muted heritage green option.')">
+    <div class="swatch-colour" style="background:#96A476;"></div>
+    <strong>Heritage Olive Green</strong><br>#96A476<br>Warmer
+  </div>
+
+  <div class="swatch-card" onclick="openSingleSwatch('Original Pale Green', '#C3D5C3', 'Original guide colour', 'Softer comparison option from the earlier guide.')">
+    <div class="swatch-colour" style="background:#C3D5C3;"></div>
+    <strong>Original Pale Green</strong><br>#C3D5C3<br>Softer comparison
+  </div>
+</div>
+
+  </section>
+  <section class="section">
+    <h2>Aubergine Range</h2>
+    <div class="swatch-grid">
+      <div class="swatch-card" onclick="openSingleSwatch('Original Aubergine', '#5C3A58', 'Visual colour reference', 'Classic aubergine for the music-zone feature wall.')">
+        <span class="recommended-badge">Classic choice</span>
+        <div class="swatch-colour" style="background:#5C3A58;"></div>
+        <strong>Original Aubergine</strong><br>#5C3A58
+      </div>
+  <div class="swatch-card" onclick="openSingleSwatch('Deep Aubergine', '#44263F', 'Visual colour reference', 'Darker and moodier aubergine option.')">
+    <div class="swatch-colour" style="background:#44263F;"></div>
+    <strong>Deep Aubergine</strong><br>#44263F
+  </div>
+
+  <div class="swatch-card" onclick="openSingleSwatch('Muted Plum', '#6B4A63', 'Visual colour reference', 'Softer plum option with less depth.')">
+    <div class="swatch-colour" style="background:#6B4A63;"></div>
+    <strong>Muted Plum</strong><br>#6B4A63
+  </div>
+
+  <div class="swatch-card" onclick="openSingleSwatch('Brown Aubergine', '#604048', 'Visual colour reference', 'Warmer brown-purple option for a cosier music zone.')">
+    <span class="recommended-badge">Warm option</span>
+    <div class="swatch-colour" style="background:#604048;"></div>
+    <strong>Brown Aubergine</strong><br>#604048
+  </div>
+
+  <div class="swatch-card" onclick="openSingleSwatch('Dusky Mauve Brown', '#7A5F64', 'Visual colour reference', 'Softer dusky mauve-brown alternative.')">
+    <div class="swatch-colour" style="background:#7A5F64;"></div>
+    <strong>Dusky Mauve Brown</strong><br>#7A5F64
+  </div>
+</div>
+
+  </section>
+  <section class="section">
+    <h2>Side-by-Side Combinations</h2>
+    <p style="color:var(--soft-grey);">Click any combination to open a larger comparison screen. From there, you can change both colours and print the pair as an A4 swatch sheet.</p>
+<div class="grid">
+  <div class="card combo-card" onclick="openComboModal('#A8B595', '#5C3A58')">
+    <div class="combo"><div class="light-text" style="background:#A8B595;">Lichen Green<br>#A8B595</div><div style="background:#5C3A58;">Original Aubergine<br>#5C3A58</div></div>
+    <p>Best classic pairing: fresh, Victorian, clear contrast.</p>
+  </div>
+
+  <div class="card combo-card" onclick="openComboModal('#A8B595', '#604048')">
+    <div class="combo"><div class="light-text" style="background:#A8B595;">Lichen Green<br>#A8B595</div><div style="background:#604048;">Brown Aubergine<br>#604048</div></div>
+    <p>Warmer and more grown-up; good with wood, brass and comics display pieces.</p>
+  </div>
+
+  <div class="card combo-card" onclick="openComboModal('#C3D5C3', '#5C3A58')">
+    <div class="combo"><div class="light-text" style="background:#C3D5C3;">Original Pale Green<br>#C3D5C3</div><div style="background:#5C3A58;">Original Aubergine<br>#5C3A58</div></div>
+    <p>Softer and brighter, but less close to the Lichen Green Michael liked.</p>
+  </div>
+
+  <div class="card combo-card" onclick="openComboModal('#9FAE92', '#604048')">
+    <div class="combo"><div class="light-text" style="background:#9FAE92;">Grey Sage<br>#9FAE92</div><div style="background:#604048;">Brown Aubergine<br>#604048</div></div>
+    <p>Moodier, calmer and more studio-like.</p>
+  </div>
+</div>
+
+  </section>
+  <section class="section">
+    <h2>Supplier Note</h2>
+    <div class="info-box">
+      <h3>Ordering Colour-Matched Paint</h3>
+      <p>For the main walls, use <strong>Dulux Lichen Green 70YY 55/299</strong> as the reference. If using Decorating Centre Online or another paint supplier, enter the brand/name/code where the colour-match product asks for it.</p>
+      <p>The hex colours are visual references. The paint supplier colour code/name should be used where possible.</p>
     </div>
-    <div class="card">
-      <h3>Music Zone</h3>
-      <div class="swatch-colour" style="background:#5C3A58;"></div>
-      <p><strong>Original Aubergine</strong><br>Hex: #5C3A58</p>
-      <p>Use for the back wall/back alcove music-zone feature area, or switch to a warmer brown-aubergine if it works better with the furniture.</p>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <h2>Green Range</h2>
-  <div class="swatch-grid">
-    <div class="swatch-card"><div class="swatch-colour" style="background:#A8B595;"></div><strong>Lichen Green</strong><br>#A8B595<br>70YY 55/299</div>
-    <div class="swatch-card"><div class="swatch-colour" style="background:#BBC7AA;"></div><strong>Light Lichen</strong><br>#BBC7AA<br>Softer option</div>
-    <div class="swatch-card"><div class="swatch-colour" style="background:#9FAE92;"></div><strong>Grey Sage</strong><br>#9FAE92<br>More muted</div>
-    <div class="swatch-card"><div class="swatch-colour" style="background:#96A476;"></div><strong>Heritage Olive Green</strong><br>#96A476<br>Warmer</div>
-    <div class="swatch-card"><div class="swatch-colour" style="background:#C3D5C3;"></div><strong>Original Pale Green</strong><br>#C3D5C3<br>Softer comparison</div>
-  </div>
-</section>
-<section class="section">
-  <h2>Aubergine Range</h2>
-  <div class="swatch-grid">
-    <div class="swatch-card"><div class="swatch-colour" style="background:#5C3A58;"></div><strong>Original Aubergine</strong><br>#5C3A58</div>
-    <div class="swatch-card"><div class="swatch-colour" style="background:#44263F;"></div><strong>Deep Aubergine</strong><br>#44263F</div>
-    <div class="swatch-card"><div class="swatch-colour" style="background:#6B4A63;"></div><strong>Muted Plum</strong><br>#6B4A63</div>
-    <div class="swatch-card"><div class="swatch-colour" style="background:#604048;"></div><strong>Brown Aubergine</strong><br>#604048</div>
-    <div class="swatch-card"><div class="swatch-colour" style="background:#7A5F64;"></div><strong>Dusky Mauve Brown</strong><br>#7A5F64</div>
-  </div>
-</section>
-<section class="section">
-  <h2>Side-by-Side Combinations</h2>
-  <div class="grid">
-    <div class="card"><div class="combo"><div class="light-text" style="background:#A8B595;">Lichen Green<br>#A8B595</div><div style="background:#5C3A58;">Original Aubergine<br>#5C3A58</div></div><p>Best classic pairing: fresh, Victorian, clear contrast.</p></div>
-    <div class="card"><div class="combo"><div class="light-text" style="background:#A8B595;">Lichen Green<br>#A8B595</div><div style="background:#604048;">Brown Aubergine<br>#604048</div></div><p>Warmer and more grown-up; good with wood, brass and comics display pieces.</p></div>
-    <div class="card"><div class="combo"><div class="light-text" style="background:#C3D5C3;">Original Pale Green<br>#C3D5C3</div><div style="background:#5C3A58;">Original Aubergine<br>#5C3A58</div></div><p>Softer and brighter, but less close to the Lichen Green Michael liked.</p></div>
-    <div class="card"><div class="combo"><div class="light-text" style="background:#9FAE92;">Grey Sage<br>#9FAE92</div><div style="background:#604048;">Brown Aubergine<br>#604048</div></div><p>Moodier, calmer and more studio-like.</p></div>
-  </div>
-</section>
-<section class="section">
-  <h2>Supplier Note</h2>
-  <div class="info-box">
-    <h3>Ordering Colour-Matched Paint</h3>
-    <p>For the main walls, use <strong>Dulux Lichen Green 70YY 55/299</strong> as the reference. If using Decorating Centre Online or another paint supplier, enter the brand/name/code where the colour-match product asks for it.</p>
-    <p>The hex colours are visual references. The paint supplier colour code/name should be used where possible.</p>
-  </div>
-</section>
-<footer class="footer"><strong>Recommended route:</strong> Lichen Green main walls with aubergine or brown-aubergine music-zone wall.</footer>
+  </section>
+  <footer class="footer">
+    <strong>Recommended route:</strong>
+    Lichen Green main walls with aubergine or brown-aubergine music-zone wall.
+  </footer>
 </main>
+<div id="singleColourModal" class="colour-modal" aria-hidden="true">
+  <div class="modal-panel">
+    <div class="modal-header">
+      <h2 id="singleModalTitle">Colour Swatch</h2>
+    </div>
+    <div class="modal-body">
+      <div id="singleSwatchPreview" class="large-swatch-preview">
+        <div class="large-swatch-label">
+          <h3 id="singleColourName">Colour name</h3>
+          <p id="singleColourCode">Code</p>
+          <p id="singleColourNote">Note</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="modal-button" onclick="printSingleSwatch()">Print A4 colour swatch</button>
+      <button class="modal-button light" onclick="closeModal('singleColourModal')">Close</button>
+    </div>
+  </div>
+</div>
+<div id="comboModal" class="colour-modal" aria-hidden="true">
+  <div class="modal-panel">
+    <div class="modal-header">
+      <h2>Side-by-Side Colour Comparison</h2>
+    </div>
+    <div class="modal-body">
+      <div class="combo-controls">
+        <div>
+          <label for="greenSelect">Main wall colour</label>
+          <select id="greenSelect" onchange="updateComboPreview()"></select>
+        </div>
+        <div>
+          <label for="aubergineSelect">Music-zone colour</label>
+          <select id="aubergineSelect" onchange="updateComboPreview()"></select>
+        </div>
+      </div>
+  <div class="combo-preview-large">
+    <div id="comboGreenSide" class="combo-preview-side">
+      <span id="comboGreenLabel">Green</span>
+    </div>
+    <div id="comboAubergineSide" class="combo-preview-side">
+      <span id="comboAubergineLabel">Aubergine</span>
+    </div>
+  </div>
+</div>
+<div class="modal-actions">
+  <button class="modal-button" onclick="printComboSwatch()">Print A4 side-by-side swatch</button>
+  <button class="modal-button secondary" onclick="setRecommendedCombo()">Use recommended pairing</button>
+  <button class="modal-button light" onclick="closeModal('comboModal')">Close</button>
+</div>
+
+  </div>
+</div>
+<script>
+const greenColours = [
+  { name: "Lichen Green", hex: "#A8B595", code: "Dulux 70YY 55/299", note: "Main recommended wall colour." },
+  { name: "Light Lichen", hex: "#BBC7AA", code: "Visual reference", note: "Softer, lighter option." },
+  { name: "Grey Sage", hex: "#9FAE92", code: "Visual reference", note: "Slightly greyer, calmer option." },
+  { name: "Heritage Olive Green", hex: "#96A476", code: "Visual reference", note: "Warmer muted heritage green." },
+  { name: "Original Pale Green", hex: "#C3D5C3", code: "Original guide colour", note: "Softer comparison colour." }
+];
+
+const aubergineColours = [
+  { name: "Original Aubergine", hex: "#5C3A58", code: "Visual reference", note: "Classic aubergine feature colour." },
+  { name: "Deep Aubergine", hex: "#44263F", code: "Visual reference", note: "Darker and moodier aubergine." },
+  { name: "Muted Plum", hex: "#6B4A63", code: "Visual reference", note: "Softer plum option." },
+  { name: "Brown Aubergine", hex: "#604048", code: "Visual reference", note: "Warmer brown-purple option." },
+  { name: "Dusky Mauve Brown", hex: "#7A5F64", code: "Visual reference", note: "Softer mauve-brown option." }
+];
+
+let currentSingle = {
+  name: "Lichen Green",
+  hex: "#A8B595",
+  code: "Dulux 70YY 55/299",
+  note: "Recommended for the main living-room walls."
+};
+
+function openSingleSwatch(name, hex, code, note) {
+  currentSingle = { name, hex, code, note };
+  document.getElementById("singleModalTitle").textContent = name + " Printable Swatch";
+  document.getElementById("singleColourName").textContent = name;
+  document.getElementById("singleColourCode").textContent = hex + " | " + code;
+  document.getElementById("singleColourNote").textContent = note;
+  document.getElementById("singleSwatchPreview").style.background = hex;
+  openModal("singleColourModal");
+}
+
+function populateSelects() {
+  const greenSelect = document.getElementById("greenSelect");
+  const aubergineSelect = document.getElementById("aubergineSelect");
+
+  greenSelect.innerHTML = "";
+  aubergineSelect.innerHTML = "";
+
+  greenColours.forEach(colour => {
+    const option = document.createElement("option");
+    option.value = colour.hex;
+    option.textContent = colour.name + " — " + colour.hex + " — " + colour.code;
+    greenSelect.appendChild(option);
+  });
+
+  aubergineColours.forEach(colour => {
+    const option = document.createElement("option");
+    option.value = colour.hex;
+    option.textContent = colour.name + " — " + colour.hex;
+    aubergineSelect.appendChild(option);
+  });
+}
+
+function findColour(list, hex) {
+  return list.find(colour => colour.hex.toLowerCase() === hex.toLowerCase()) || list[0];
+}
+
+function openComboModal(greenHex, aubergineHex) {
+  populateSelects();
+  document.getElementById("greenSelect").value = greenHex;
+  document.getElementById("aubergineSelect").value = aubergineHex;
+  updateComboPreview();
+  openModal("comboModal");
+}
+
+function updateComboPreview() {
+  const greenHex = document.getElementById("greenSelect").value;
+  const aubergineHex = document.getElementById("aubergineSelect").value;
+
+  const green = findColour(greenColours, greenHex);
+  const aubergine = findColour(aubergineColours, aubergineHex);
+
+  document.getElementById("comboGreenSide").style.background = green.hex;
+  document.getElementById("comboAubergineSide").style.background = aubergine.hex;
+
+  document.getElementById("comboGreenLabel").innerHTML = green.name + "<br>" + green.hex + "<br>" + green.code;
+  document.getElementById("comboAubergineLabel").innerHTML = aubergine.name + "<br>" + aubergine.hex + "<br>" + aubergine.code;
+}
+
+function setRecommendedCombo() {
+  document.getElementById("greenSelect").value = "#A8B595";
+  document.getElementById("aubergineSelect").value = "#5C3A58";
+  updateComboPreview();
+}
+
+function openModal(id) {
+  document.getElementById(id).classList.add("is-open");
+  document.getElementById(id).setAttribute("aria-hidden", "false");
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove("is-open");
+  document.getElementById(id).setAttribute("aria-hidden", "true");
+}
+
+function printSingleSwatch() {
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+<title>${currentSingle.name} A4 Swatch</title>
+<style>
+@page { size: A4; margin: 0; }
+html, body { margin: 0; width: 210mm; height: 297mm; font-family: Arial, sans-serif; }
+.sheet {
+  width: 210mm;
+  height: 297mm;
+  background: ${currentSingle.hex};
+  display: flex;
+  align-items: end;
+  box-sizing: border-box;
+  padding: 18mm;
+}
+.label {
+  background: rgba(255,255,255,0.9);
+  color: #222;
+  padding: 10mm;
+  border-radius: 8mm;
+  max-width: 150mm;
+}
+h1 { margin: 0 0 4mm; font-size: 24pt; }
+p { margin: 2mm 0; font-size: 13pt; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="label">
+    <h1>${currentSingle.name}</h1>
+    <p><strong>Hex:</strong> ${currentSingle.hex}</p>
+    <p><strong>Reference:</strong> ${currentSingle.code}</p>
+    <p>${currentSingle.note}</p>
+    <p><strong>Supplier note:</strong> Use the paint supplier colour name/code where available. Hex is a visual reference.</p>
+  </div>
+</div>
+<script>window.onload = function(){ window.print(); }<\/script>
+</body>
+</html>`;
+const printWindow = window.open("", "_blank", "width=900,height=900");
+printWindow.document.open();
+printWindow.document.write(html);
+printWindow.document.close();
+}
+function printComboSwatch() {
+const green = findColour(greenColours, document.getElementById("greenSelect").value);
+const aubergine = findColour(aubergineColours, document.getElementById("aubergineSelect").value);
+const html = `
+<!DOCTYPE html>
+<html>
+<head>
+<title>${green.name} + ${aubergine.name} A4 Combination</title>
+<style>
+@page { size: A4; margin: 0; }
+html, body { margin: 0; width: 210mm; height: 297mm; font-family: Arial, sans-serif; }
+.sheet {
+  width: 210mm;
+  height: 297mm;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.side {
+  display: flex;
+  align-items: end;
+  box-sizing: border-box;
+  padding: 14mm;
+}
+.label {
+  background: rgba(255,255,255,0.9);
+  color: #222;
+  padding: 8mm;
+  border-radius: 7mm;
+}
+h1 { margin: 0 0 4mm; font-size: 20pt; }
+p { margin: 2mm 0; font-size: 12pt; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="side" style="background:${green.hex};">
+    <div class="label">
+      <h1>${green.name}</h1>
+      <p><strong>Hex:</strong> ${green.hex}</p>
+      <p><strong>Reference:</strong> ${green.code}</p>
+      <p>Main wall colour</p>
+    </div>
+  </div>
+  <div class="side" style="background:${aubergine.hex};">
+    <div class="label">
+      <h1>${aubergine.name}</h1>
+      <p><strong>Hex:</strong> ${aubergine.hex}</p>
+      <p><strong>Reference:</strong> ${aubergine.code}</p>
+      <p>Music-zone colour</p>
+    </div>
+  </div>
+</div>
+<script>window.onload = function(){ window.print(); }<\/script>
+</body>
+</html>`;
+const printWindow = window.open("", "_blank", "width=900,height=900");
+printWindow.document.open();
+printWindow.document.write(html);
+printWindow.document.close();
+}
+document.addEventListener("keydown", function(event) {
+if (event.key === "Escape") {
+closeModal("singleColourModal");
+closeModal("comboModal");
+}
+});
+document.getElementById("singleColourModal").addEventListener("click", function(event) {
+if (event.target === this) closeModal("singleColourModal");
+});
+document.getElementById("comboModal").addEventListener("click", function(event) {
+if (event.target === this) closeModal("comboModal");
+});
+</script>
 </body>
 </html>
