@@ -640,3 +640,32 @@ grid-template-columns: 1fr;
 min-height: 300px;
 }
 }
+.colour-instruction-banner {
+background: linear-gradient(135deg, #FFF8E1, #F4E6B5);
+color: var(--aubergine-dark);
+border: 3px solid var(--gold);
+border-left: 9px solid var(--aubergine);
+border-radius: 16px;
+padding: 18px 20px;
+margin-top: 18px;
+font-size: 17px;
+font-weight: 800;
+line-height: 1.5;
+box-shadow: 0 8px 22px rgba(44, 53, 57, 0.12);
+}
+.colour-instruction-banner span {
+display: block;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: var(--aubergine);
+margin-bottom: 4px;
+}
+.music-heritage-card {
+background: linear-gradient(135deg, var(--soft-green), #ffffff);
+border: 2px solid var(--gold);
+}
+.music-heritage-card strong {
+color: var(--aubergine);
+}
