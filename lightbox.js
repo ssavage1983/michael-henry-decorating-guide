@@ -1,43 +1,71 @@
 document.addEventListener("DOMContentLoaded", function () {
-const clickableImages = document.querySelectorAll(".image-card img, img.room-render");
-if (!clickableImages.length) return;
-const lightbox = document.createElement("div");
-lightbox.className = "image-lightbox";
-lightbox.innerHTML =     <button class="image-lightbox-close" type="button" aria-label="Close full-screen image">×</button>     <div class="image-lightbox-inner">       <img src="" alt="">       <div class="image-lightbox-caption"></div>     </div>  ;
-document.body.appendChild(lightbox);
-const lightboxImg = lightbox.querySelector("img");
-const caption = lightbox.querySelector(".image-lightbox-caption");
-const closeButton = lightbox.querySelector(".image-lightbox-close");
-clickableImages.forEach(function (img) {
-img.setAttribute("title", "Click to view full screen");
-img.addEventListener("click", function () {
-lightboxImg.src = img.currentSrc || img.src;
-lightboxImg.alt = img.alt || "Room image";
-caption.textContent = img.alt || "Room image";
-lightbox.classList.add("is-open");
-document.body.style.overflow = "hidden";
-});
-const imageCard = img.closest(".image-card");
-if (imageCard && !imageCard.querySelector(".click-hint")) {
-  const hint = document.createElement("p");
-  hint.className = "click-hint";
-  hint.textContent = "Click image to open full screen";
-  imageCard.appendChild(hint);
-}
+  var images = document.querySelectorAll(".image-card img, img.room-render");
+  if (!images.length) return;
 
-});
-function closeLightbox() {
-lightbox.classList.remove("is-open");
-lightboxImg.src = "";
-document.body.style.overflow = "";
-}
-closeButton.addEventListener("click", closeLightbox);
-lightbox.addEventListener("click", function (event) {
-if (event.target === lightbox) closeLightbox();
-});
-document.addEventListener("keydown", function (event) {
-if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
-closeLightbox();
-}
-});
+  var lightbox = document.createElement("div");
+  lightbox.className = "image-lightbox";
+
+  var closeButton = document.createElement("button");
+  closeButton.className = "image-lightbox-close";
+  closeButton.type = "button";
+  closeButton.setAttribute("aria-label", "Close full-screen image");
+  closeButton.textContent = "×";
+
+  var inner = document.createElement("div");
+  inner.className = "image-lightbox-inner";
+
+  var bigImage = document.createElement("img");
+  bigImage.src = "";
+  bigImage.alt = "";
+
+  var caption = document.createElement("div");
+  caption.className = "image-lightbox-caption";
+
+  inner.appendChild(bigImage);
+  inner.appendChild(caption);
+  lightbox.appendChild(closeButton);
+  lightbox.appendChild(inner);
+  document.body.appendChild(lightbox);
+
+  images.forEach(function (img) {
+    img.setAttribute("title", "Click to view full screen");
+
+    var card = img.closest(".image-card");
+    if (card && !card.querySelector(".click-hint")) {
+      var hint = document.createElement("p");
+      hint.className = "click-hint";
+      hint.textContent = "Click image to open full screen";
+      card.appendChild(hint);
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    var img = event.target.closest(".image-card img, img.room-render");
+    if (!img) return;
+
+    event.preventDefault();
+    bigImage.src = img.currentSrc || img.src;
+    bigImage.alt = img.alt || "Room image";
+    caption.textContent = img.alt || "Room image";
+    lightbox.classList.add("is-open");
+    document.body.classList.add("lightbox-open");
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    document.body.classList.remove("lightbox-open");
+    bigImage.src = "";
+  }
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
 });
