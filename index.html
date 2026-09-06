@@ -3,556 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Decorating Guide: Michael Henry</title>
+<title>Michael Henry Decorating Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --cream-bg: #FBFAF6;
-    --card-bg: #F4F7F4;
-    --aubergine: #5C3A58;
-    --aubergine-dark: #3E273B;
-    --pale-green: #C3D5C3;
-    --pale-green-light: #E8F0E8;
-    --charcoal: #1F2933;
-    --off-white: #F8F4EA;
-    --gold: #C8A24A;
-    --soft-grey: #5B6670;
-    --warning-bg: #FFF8E1;
-    --warning-border: #A94442;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--cream-bg);
-    color: var(--charcoal);
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.65;
-  }
-
-  .guide {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 24px;
-  }
-
-  /* Header */
-  .header {
-    background: var(--aubergine);
-    color: var(--off-white);
-    padding: 36px 28px;
-    border-radius: 18px;
-    margin-bottom: 28px;
-  }
-
-  .header h1 {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 34px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin: 0 0 12px;
-    color: var(--off-white);
-  }
-
-  .gold-rule {
-    width: 90px;
-    height: 3px;
-    background: var(--gold);
-    margin: 16px 0;
-  }
-
-  /* Sections */
-  .section { margin-top: 36px; }
-
-  .section h2 {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    color: var(--aubergine);
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--pale-green);
-    padding-bottom: 8px;
-  }
-
-  /* Layouts */
-  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-  .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-
-  /* Cards */
-  .card {
-    background: var(--card-bg);
-    border: 2px solid var(--pale-green);
-    border-radius: 14px;
-    padding: 22px;
-  }
-
-  .card h3 {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--aubergine);
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
-  
-  .product-card {
-    background: var(--off-white);
-    border: 2px solid var(--aubergine);
-    border-radius: 14px;
-    padding: 18px;
-    margin-bottom: 16px;
-  }
-  
-  .product-card h3 { margin: 0 0 8px 0; color: var(--aubergine); font-family: "Montserrat", Arial, sans-serif; font-size: 17px; text-transform: uppercase;}
-  
-  .product-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-
-  .info-box {
-    background: var(--pale-green-light);
-    border: 2px solid var(--pale-green);
-    border-radius: 14px;
-    padding: 18px;
-    margin-bottom: 18px;
-  }
-
-  .warning-box {
-    background: var(--warning-bg);
-    border: 2px solid var(--warning-border);
-    border-radius: 14px;
-    padding: 18px;
-    margin-bottom: 18px;
-  }
-
-  .big-tip {
-    background: var(--aubergine);
-    color: var(--off-white);
-    border: 2px solid var(--gold);
-    border-radius: 14px;
-    padding: 22px;
-    margin-top: 24px;
-  }
-
-  .big-tip h3 {
-    color: var(--gold);
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    margin-top: 0; margin-bottom: 12px;
-  }
-
-  /* Step-by-Step Visual Cards */
-  .step-card {
-    display: flex; align-items: flex-start; background: white;
-    border: 2px solid var(--pale-green); border-radius: 14px;
-    padding: 20px; margin-bottom: 16px;
-  }
-  .step-number {
-    flex-shrink: 0; width: 42px; height: 42px;
-    background: var(--aubergine); color: var(--off-white);
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-family: "Montserrat", Arial, sans-serif; font-size: 20px; font-weight: 700;
-    margin-right: 20px;
-  }
-  .step-content { flex-grow: 1; }
-  .step-content h3 { margin: 0 0 8px 0; color: var(--aubergine); font-size: 17px; }
-  .step-details { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; font-size: 13px; }
-  .step-badge { background: var(--pale-green-light); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--pale-green); font-weight: 600; color: var(--charcoal); }
-
-  /* Tables */
-  .table-container { width: 100%; overflow-x: auto; border-radius: 12px; margin-bottom: 24px; border: 1px solid var(--pale-green); }
-  table { width: 100%; border-collapse: collapse; background: white; }
-  th { background: var(--aubergine); color: var(--off-white); font-family: "Montserrat", Arial, sans-serif; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 12px; text-align: left; }
-  td { padding: 12px; border-bottom: 1px solid var(--pale-green); vertical-align: top; font-size: 14px; }
-  tr:last-child td { border-bottom: none; }
-
-  /* Buttons & Images */
-  a.button {
-    display: inline-block; background: var(--aubergine); color: var(--off-white);
-    padding: 8px 14px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 13px;
-  }
-  a.button:hover { background: var(--aubergine-dark); }
-  
-  .mockup-container {
-    background: var(--card-bg); border: 2px solid var(--pale-green);
-    border-radius: 14px; padding: 24px; text-align: center; margin-bottom: 24px;
-  }
-  .color-swatches { display: flex; justify-content: center; gap: 24px; margin-bottom: 24px; }
-  .swatch { text-align: center; }
-  .swatch-color {
-    width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--aubergine);
-    margin: 0 auto 10px;
-  }
-  .swatch-pale-green { background-color: var(--pale-green); }
-  .swatch-aubergine { background-color: var(--aubergine); }
-  .swatch-details { font-family: "Montserrat", Arial, sans-serif; font-size: 12px; font-weight: 700; color: var(--charcoal); }
-  
-  .room-render {
-    width: 100%; max-width: 800px; height: auto; border-radius: 12px;
-    border: 2px solid var(--pale-green); margin: 0 auto 24px auto; display: block;
-  }
-
-  /* Empty Checklists */
-  .checklist { list-style: none; padding-left: 0; margin: 0; }
-  .checklist li { padding: 8px 0 8px 32px; position: relative; border-bottom: 1px solid var(--pale-green); }
-  .checklist li:last-child { border-bottom: none; }
-  .checklist li::before {
-    content: "☐"; position: absolute; left: 4px; color: var(--aubergine); font-size: 22px; top: 4px; line-height: 1;
-  }
-
-  /* Footer */
-  .footer { background: var(--aubergine); color: var(--off-white); padding: 26px; border-radius: 18px; margin-top: 42px; text-align: center; }
-  .footer strong { color: var(--gold); display: block; margin-bottom: 8px; }
-
-  /* Mobile Responsive */
-  @media (max-width: 768px) {
-    .grid, .grid-3 { grid-template-columns: 1fr; }
-    .product-details { grid-template-columns: 1fr; }
-  }
-</style>
+<link rel="stylesheet" href="styles.css?v=20260906-1120">
 </head>
 <body>
-  <main class="guide">
-    
-    <!-- 1. Header -->
-    <header class="header">
-      <h1>Decorating Guide</h1>
-      <div class="gold-rule"></div>
-      <p><strong>Property:</strong> 83A Lucien Rd, London SW17 8HS<br>
-         <strong>Room:</strong> Ground floor front Victorian living room<br>
-         <strong>Prepared for:</strong> Michael Henry</p>
-      <p style="margin-top: 12px; font-size: 14px; color: var(--pale-green);">
-         Practical preparation, accurate paint quantities (2.81m height), bespoke repair methods for woodchip, and a step-by-step decorating plan tailored to budget-conscious execution in your Victorian colour scheme.
-      </p>
-    </header>
-
-    <!-- 2. Quick Decorating Summary -->
-    <section class="section">
-      <h2>Quick Decorating Summary</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>The Goal</h3>
-          <ul class="checklist">
-            <li><strong>Style:</strong> Pale green main walls, Aubergine alcoves.</li>
-            <li><strong>Finish:</strong> Clean, flat matt emulsion.</li>
-            <li><strong>Budget:</strong> Practical and conscious; no unnecessary expensive work.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>The Challenges</h3>
-          <ul class="checklist">
-            <li><strong>Woodchip Issue:</strong> Small bubbled area (approx 1 m²) on the right-hand front wall near the radiator.</li>
-            <li><strong>Vinyl Silk Issue:</strong> Existing bright yellow walls are shiny; requires deglossing and bonding primer.</li>
-            <li><strong>Repairs:</strong> Old picture holes to fill flush.</li>
-          </ul>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Decorating Guide</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <span class="dropbtn">Guide Sections ▼</span>
+        <div class="dropdown-content">
+          <a href="preparation.html">Preparation</a>
+          <a href="products.html">Products &amp; Costs</a>
+          <a href="colours.html">Colours</a>
+          <a href="furnishings.html">Furnishings</a>
+          <a href="checklist.html">Checklist / PDF</a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</nav>
+<main class="guide">
+  <header class="header">
+    <h1>Decorating Guide</h1>
+    <div class="gold-rule"></div>
+    <p><strong>Room:</strong> Ground floor front Victorian living room<br>
+    <strong>Prepared for:</strong> Michael Henry</p>
+    <p>Multi-page guide for the Lichen Green living room, aubergine music zone, grey seating, curtains, furnishings, costs and decorating plan.</p>
+  </header>
 
-    <!-- Room Layout & Visuals -->
-    <section class="section">
-      <h2>Room Layout &amp; Colour Visualisation</h2>
-      <div class="mockup-container">
-        <div class="color-swatches">
-          <div class="swatch">
-            <div class="swatch-color swatch-pale-green"></div>
-            <div class="swatch-details">PALE GREEN<br><span style="color:var(--soft-grey)">Main Walls</span></div>
-          </div>
-          <div class="swatch">
-            <div class="swatch-color swatch-aubergine"></div>
-            <div class="swatch-details">AUBERGINE<br><span style="color:var(--soft-grey)">Fireplace Alcoves</span></div>
-          </div>
-        </div>
-
-        <!-- Provided 3D Render -->
-        <img src="images/3d-room-render.jpg" alt="3D visual render of Michael Henry's Victorian living room with pale green walls and aubergine alcoves" class="room-render">
-
-        <!-- Provided 2D Floorplan -->
-        <img src="images/2d-floorplan.jpg" alt="2D measured floorplan of Michael Henry's Victorian living room" class="room-render" style="margin-bottom:0;">
-      </div>
-    </section>
-
-    <!-- Room Observations & Constraints -->
-    <section class="section">
-      <h2>Room Observations &amp; Constraints</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Bright Yellow Vinyl Silk</h3>
-          <p><strong>Issue:</strong> Vinyl silk is shiny and slightly flexible. Standard matt emulsion will slide off, cure poorly, or easily scratch off if applied directly.</p>
-          <p><strong>Action required:</strong> The walls must be lightly sanded to remove the gloss, cleaned gently, and then primed with a bonding primer before any topcoats are applied.</p>
-        </div>
-        <div class="card">
-          <h3>Bubbled Woodchip (Approx 1 m²)</h3>
-          <p><strong>Issue:</strong> Bubbling on the bottom/front wall area on the right-hand side near the radiator/external wall. The bubbling appears likely to be linked to the cold external wall/radiator-side area, possibly from condensation or temperature difference. Check the area is dry and stable before sealing or painting.</p>
-          <p><strong>Action required:</strong> Treat it as a small localised repair. Do not strip the whole room or plaster.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bespoke Preparation & Repair Methods -->
-    <section class="section">
-      <h2>Bespoke Preparation &amp; Repair Methods</h2>
-      
-      <div class="warning-box">
-        <h3 style="color:var(--warning-border); font-family:Montserrat; font-size:16px; margin-top:0;">Wallpaper Repair FAQ: Would PVA glue work for this small bubbled area?</h3>
-        <p><strong>Answer:</strong> PVA might physically stick small loose wallpaper down, but it should not be recommended as the first-choice repair here.</p>
-        <p>PVA can cause problems because it may:</p>
-        <ul style="margin: 8px 0; padding-left: 20px;">
-          <li>seal the surface and create shiny patches</li>
-          <li>affect future paint adhesion</li>
-          <li>make later wallpaper repair or removal harder</li>
-          <li>show through paint as a visible patch</li>
-          <li>fail again if the bubbling is linked to cold-wall condensation or moisture movement</li>
-        </ul>
-      </div>
-
-      <div class="info-box">
-        <h3 style="color:var(--aubergine); font-family:Montserrat; font-size:16px; margin-top:0;">1. Repairing the Bubbled Woodchip</h3>
+  <section class="section">
+    <h2>Overview</h2>
+    <div class="grid">
+      <div class="card green">
+        <h3>Main Scheme</h3>
         <ul class="checklist">
-          <li><strong>Re-bond:</strong> Use proper wallpaper seam adhesive or wallpaper repair adhesive.</li>
-          <li><strong>Apply:</strong> Use a small brush, nozzle, or syringe to get adhesive behind the bubble if possible.</li>
-          <li><strong>Press:</strong> Gently press the paper flat with a clean sponge or seam roller. Wipe away excess immediately.</li>
-          <li><strong>Alternative:</strong> If the bubbled woodchip will not sit flat, carefully cut away only the failed loose section. Seal the exposed edges. Fill small damaged areas with Toupret-style interior filler. Lightly stipple the wet filler with a damp sponge to mimic the woodchip texture.</li>
-          <li><strong>Prime:</strong> Let it dry fully before priming the repaired patch, then painting.</li>
+          <li>Main living walls in Lichen Green: #A8B595 / Dulux 70YY 55/299.</li>
+          <li>Aubergine or brown-aubergine used for the back wall/back alcove music zone.</li>
+          <li>Natural grey fabric seating keeps the room calm and budget-friendly.</li>
+          <li>Aubergine/plum curtains should be chosen before finalising the feature-wall shade.</li>
         </ul>
-        <p style="font-weight:600; margin-top:12px; color:var(--charcoal);">Note: Because the bubbled area is only around 1 m², this should be treated as a small localised repair, not a reason to strip the whole room, plaster the wall, or change the full decorating plan.</p>
       </div>
-
-      <div class="info-box">
-        <h3 style="color:var(--aubergine); font-family:Montserrat; font-size:16px; margin-top:0;">2. Preparing the Vinyl Silk Walls</h3>
+      <div class="card green">
+        <h3>New Layout Idea</h3>
         <ul class="checklist">
-          <li>Lightly sand the entire wall surface with medium-fine sandpaper to dull the shiny silk finish.</li>
-          <li>Wash the walls gently with sugar soap to remove sanding dust. Do not heavily soak any remaining wallpaper areas.</li>
-          <li>Apply one full coat of a high-adhesion bonding primer (such as Zinsser Bulls Eye 1-2-3).</li>
-          <li>Apply two coats of your chosen trade vinyl matt emulsion.</li>
+          <li>Back wall/alcove becomes the music and production zone.</li>
+          <li>Low shelving separates the music area from the living/relaxing zone.</li>
+          <li>Guitars can become a wall feature if safely fixed and not overcrowded.</li>
+          <li>Mirror above the blocked fireplace helps bounce light around the room.</li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Paint Quantity Estimate -->
-    <section class="section">
-      <h2>Paint Quantity Estimate (Confirmed 2.81m Height)</h2>
-      <p style="margin-bottom: 16px; font-size:14px; color:var(--charcoal);">
-        Calculations allow for extra paint because the existing finish is bright yellow vinyl silk, and extra paint is needed for textured woodchip, cutting in, repairs, and touch-ups. <em>(Assumes coverage of ~12m² per litre per coat for Vinyl Matt, and ~10m² for Zinsser).</em>
-      </p>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Area</th>
-              <th>Dimensions</th>
-              <th>Est. Area</th>
-              <th>Coats</th>
-              <th>Quantity to Buy</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Aubergine Alcoves</strong></td>
-              <td>2.49m total width × 2.81m</td>
-              <td>~7.0 m² (before deductions)</td>
-              <td>2 Coats Matt</td>
-              <td><strong>2.5 Litres</strong> (Leaves plenty for deep coverage & touch-ups)</td>
-            </tr>
-            <tr>
-              <td><strong>Pale Green Main Walls</strong></td>
-              <td>North (3.81x2.81) + West (3.80x2.81) + East face (1.31x2.81) + Approx Bay Area</td>
-              <td>~30-32 m² (deducting door/window)</td>
-              <td>2 Coats Matt</td>
-              <td><strong>7.5 to 10 Litres</strong> (Buy 2x 5L tins to be safe for textured woodchip)</td>
-            </tr>
-            <tr>
-              <td><strong>Bonding Primer (Zinsser)</strong></td>
-              <td>Whole room (Alcoves + Main Walls)</td>
-              <td>~37-39 m²</td>
-              <td>1 Coat</td>
-              <td><strong>5 Litres</strong> (Ensures solid coat over all the vinyl silk)</td>
-            </tr>
-          </tbody>
-        </table>
+  <section class="section">
+    <h2>Core Colour &amp; Fabric Swatches</h2>
+    <div class="swatch-grid">
+      <div class="swatch-card">
+        <div class="swatch-colour" style="background:#A8B595;"></div>
+        <strong>Lichen Green</strong><br>#A8B595<br>Main walls
       </div>
-    </section>
-
-    <!-- Best Value Shopping Strategy (Product Cards) -->
-    <section class="section">
-      <h2>Best-Value Shopping Strategy</h2>
-      <p style="margin-bottom:16px;">Focusing on the cheapest overall basket (including click-and-collect convenience) rather than splitting orders and paying multiple delivery fees.</p>
-      
-      <div class="product-card">
-        <h3>1. Zinsser Bulls Eye 1-2-3 Primer & Toupret Filler</h3>
-        <div class="product-details">
-          <div><strong>Retailer:</strong> Toolstation or Screwfix (Local)</div>
-          <div><strong>Quantity:</strong> 5L Primer + 1-2kg Filler</div>
-          <div><strong>Price:</strong> check live price</div>
-          <div><strong>Delivery:</strong> Free Click & Collect</div>
-        </div>
-        <p><strong>Why suitable:</strong> Zinsser safely bonds to the shiny vinyl silk without risking peeling. Toupret will not slump when mimicking the woodchip repairs. Buying locally avoids heavy liquid delivery fees.</p>
+      <div class="swatch-card">
+        <div class="swatch-colour" style="background:#5C3A58;"></div>
+        <strong>Original Aubergine</strong><br>#5C3A58<br>Music wall / curtain target
       </div>
-
-      <div class="product-card">
-        <h3>2. Trade Vinyl Matt (Pale Green & Aubergine)</h3>
-        <div class="product-details">
-          <div><strong>Retailer:</strong> Brewers or Decorating Centre Online</div>
-          <div><strong>Quantity:</strong> 10L Pale Green, 2.5L Aubergine</div>
-          <div><strong>Price:</strong> check live price</div>
-          <div><strong>Delivery:</strong> Usually free over £50</div>
-        </div>
-        <p><strong>Why suitable:</strong> Trade vinyl matt covers much better than retail paint, which is vital when hiding bright yellow walls. Getting them custom-mixed at the same trade centre ensures colour accuracy and triggers the free delivery threshold.</p>
+      <div class="swatch-card">
+        <div class="swatch-colour" style="background:#7B7F83;"></div>
+        <strong>Natural Sofa Grey</strong><br>#7B7F83<br>2-seater sofa / armchair
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Equipment Checklist -->
-    <section class="section">
-      <h2>Equipment Checklist</h2>
-      <div class="grid-3">
-        <div class="card" style="padding:16px;">
-          <h3>Preparation</h3>
-          <ul class="checklist" style="font-size:14px;">
-            <li>Dust sheets & Masking tape</li>
-            <li>Sugar soap & sponge</li>
-            <li>Craft knife & Seam roller</li>
-            <li>Wallpaper repair adhesive</li>
-            <li>Toupret interior filler</li>
-            <li>Sandpaper & block (PPE)</li>
-          </ul>
-        </div>
-        <div class="card" style="padding:16px;">
-          <h3>Painting</h3>
-          <ul class="checklist" style="font-size:14px;">
-            <li>Roller frame & sleeves</li>
-            <li>Angled cutting-in brush</li>
-            <li>Paint tray / scuttle</li>
-            <li>Extension pole</li>
-            <li>Zinsser 1-2-3 Primer</li>
-            <li>Trade Vinyl Matt (x2 colours)</li>
-          </ul>
-        </div>
-        <div class="card" style="padding:16px;">
-          <h3>Finishing</h3>
-          <ul class="checklist" style="font-size:14px;">
-            <li>Small artist's brush</li>
-            <li>Bin bags & spare tape</li>
-            <li>Cleaning cloths</li>
-            <li>Labelled paint pots</li>
-          </ul>
-        </div>
+  <section class="section">
+    <h2>Room Visuals</h2>
+    <div class="grid">
+      <div class="image-card card">
+        <img src="images/3d-room-render.jpg" alt="Original 3D room render" class="room-render">
+        <p class="caption">Existing 3D room render for the core decorating scheme.</p>
       </div>
-    </section>
-
-    <!-- Step-by-step decorating plan -->
-    <section class="section">
-      <h2>Step-by-Step Decorating Plan</h2>
-      
-      <div class="step-card">
-        <div class="step-number">1</div>
-        <div class="step-content">
-          <h3>Clear and Protect</h3>
-          <p>Move furniture to the centre. Lay dust sheets. Mask skirting, the 3.81m entry doorway frame, radiator, and light switches.</p>
-        </div>
+      <div class="image-card card">
+        <img src="images/2d-floorplan.jpg" alt="Original 2D floorplan" class="room-render">
+        <p class="caption">Original measured floorplan reference.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="step-card">
-        <div class="step-number">2</div>
-        <div class="step-content">
-          <h3>De-gloss the Vinyl Silk</h3>
-          <p>Lightly sand the bright yellow walls to break the shiny surface. Wash down with sugar soap. Allow to dry.</p>
-        </div>
-      </div>
+  <section class="section">
+    <h2>Guide Sections</h2>
+    <div class="grid-3">
+      <div class="card"><h3>Preparation</h3><p>Repair the bubbling woodchip, de-gloss the vinyl silk and prepare the walls properly before painting.</p><a class="button" href="preparation.html">Open Preparation</a></div>
+      <div class="card"><h3>Products &amp; Costs</h3><p>Shopping list, checked price estimates and a full basket total including paint, primer and sundries.</p><a class="button" href="products.html">Open Products</a></div>
+      <div class="card"><h3>Colours</h3><p>Lichen Green, aubergine, brown-purple options, natural grey seating and side-by-side colour combinations.</p><a class="button" href="colours.html">Open Colours</a></div>
+      <div class="card"><h3>Furnishings</h3><p>Music-zone layout, grey seating, aubergine curtains, dye options, shelving, mirror and display ideas.</p><a class="button" href="furnishings.html">Open Furnishings</a></div>
+      <div class="card"><h3>Checklist / PDF</h3><p>Equipment checklist, decorating steps, drying times and final finish checklist.</p><a class="button" href="checklist.html">Open Checklist</a></div>
+    </div>
+  </section>
 
-      <div class="step-card">
-        <div class="step-number">3</div>
-        <div class="step-content">
-          <h3>Localised Wallpaper Repair & Fill Holes</h3>
-          <p>Inject or brush wallpaper repair adhesive behind the 1 m² bubbled area near the radiator. Press flat. Fill old picture holes flush. (Allow overnight dry).</p>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-number">4</div>
-        <div class="step-content">
-          <h3>Prime All Walls</h3>
-          <p>Sand the picture-hole filler smooth. Spot-prime the wallpaper repair. Apply a full coat of Zinsser Bulls Eye 1-2-3 primer over all yellow walls. (Allow 1-2 hrs dry).</p>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-number">5</div>
-        <div class="step-content">
-          <h3>Paint Main Walls (Pale Green)</h3>
-          <p>Cut in and roll the Pale Green main walls (West, North, South bay). Do not overload the roller. (Allow 2-4 hrs dry).</p>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-number">6</div>
-        <div class="step-content">
-          <h3>Paint Alcoves (Aubergine)</h3>
-          <p>Mask the chimney breast return edge. Cut in and roll the 1.29m North alcove and 1.20m South alcove with Aubergine. (Allow 2-4 hrs dry).</p>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-number">7</div>
-        <div class="step-content">
-          <h3>Second Coats & Clean Up</h3>
-          <p>Apply second coats to both colours for an opaque finish. Remove tape carefully while the paint is still slightly damp.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Big tips & Safety -->
-    <section class="section">
-      <div class="big-tip">
-        <h3>Big Tip: Safety &amp; Masking</h3>
-        <ul class="checklist" style="color:var(--off-white);">
-          <li style="border-bottom:1px solid var(--aubergine-dark);"><strong>Ventilate:</strong> Always ventilate the room well when sanding and painting.</li>
-          <li style="border-bottom:1px solid var(--aubergine-dark);"><strong>PPE:</strong> Wear eye protection and a suitable mask when sanding the vinyl silk and the dried filler.</li>
-          <li style="border-bottom:none;"><strong>Radiator Access:</strong> Protect the floor beneath the radiator thoroughly, and use a mini-roller on a long handle to reach behind it without removing it.</li>
-        </ul>
-      </div>
-    </section>
-    
-    <!-- Final finish checklist -->
-    <section class="section">
-      <h2>Final Finish Checklist</h2>
-      <div class="grid">
-        <div class="card">
-          <ul class="checklist">
-            <li>Bubbled woodchip safely re-bonded or filled.</li>
-            <li>Picture holes filled and sanded smooth.</li>
-            <li>Vinyl silk walls entirely coated in bonding primer.</li>
-            <li>Dust removed from all walls and skirting.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <ul class="checklist">
-            <li>Edges masked securely (chimney/alcove split).</li>
-            <li>Two full topcoats applied.</li>
-            <li>Tape removed carefully while slightly damp.</li>
-            <li>Leftover Aubergine and Pale Green paint labelled.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <strong>Decorating guide prepared as a practical friend-to-friend help sheet.</strong>
-      Always check product labels, drying times and live prices before buying.
-    </footer>
-
-  </main>
+  <footer class="footer">
+    <strong>Practical friend-to-friend decorating guide.</strong>
+    Check live prices, stock, delivery, cashback and product labels before buying.
+  </footer>
+</main>
+<script src="lightbox.js?v=20260906-1120"></script>
 </body>
 </html>
